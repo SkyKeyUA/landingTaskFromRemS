@@ -7,4 +7,49 @@ body {
   color: #626687;
 }
 .wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.header {
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__body
+
+  &__body {
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__menu
+
+  &__menu {
+  }
+}
+.menu {
+  // .menu__body
+
+  &__body {
+  }
+
+  // .menu__list
+
+  &__list {
+  }
+
+  // .menu__link
+
+  &__link {
+  }
+}
+.sub-menu {
+  // .sub-menu__list
+
+  &__list {
+  }
 }
