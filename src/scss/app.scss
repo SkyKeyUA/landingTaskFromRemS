@@ -1,55 +1,140 @@
 /** @format */
 @import './libs/normalize';
+@import './variables';
 
 body {
-  font-family: 'Lexend';
-  font-size: 14px;
-  color: #626687;
 }
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
+  font-family: 'Lexend';
+  font-size: 14px;
+  color: #626687;
 }
-.header {
-  // .header__container
+//========================================================================================================================================================
+.content {
+  position: relative;
+  background: url('../../public/img/header/image.jpg') right no-repeat;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    left: 74px;
+    top: -162px;
+    z-index: -1;
+    background: #82f7ff;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    left: -173px;
+    top: -77px;
+    z-index: -1;
+    background: #82ffd2;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+  }
+
+  // .content__body
+
+  &__body {
+  }
+
+  // .content__container
 
   &__container {
   }
+}
 
-  // .header__body
+.place {
+  // .place__body
 
   &__body {
   }
 
-  // .header__logo
+  // .place__title
 
-  &__logo {
+  &__title {
   }
 
-  // .header__menu
+  // .place__text
 
-  &__menu {
+  &__text {
+  }
+
+  // .place__input
+
+  &__input {
+  }
+
+  // .place__partnership
+
+  &__partnership {
   }
 }
-.menu {
-  // .menu__body
+.partnership {
+  // .partnership__title
+
+  &__title {
+  }
+
+  // .partnership__images
+
+  &__images {
+  }
+
+  // .partnership__image
+
+  &__image {
+  }
+}
+.info {
+  // .info__body
 
   &__body {
   }
 
-  // .menu__list
+  // .info__cards
 
-  &__list {
+  &__cards {
   }
 
-  // .menu__link
+  // .info__card
 
-  &__link {
+  &__card {
+  }
+
+  // .info__images
+
+  &__images {
+  }
+
+  // .info__image
+
+  &__image {
+  }
+
+  // .info__items
+
+  &__items {
+  }
+
+  // .info__title
+
+  &__title {
+  }
+
+  // .info__text
+
+  &__text {
   }
 }
-.sub-menu {
-  // .sub-menu__list
 
-  &__list {
-  }
-}
+//========================================================================================================================================================

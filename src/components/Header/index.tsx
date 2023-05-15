@@ -3,12 +3,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import styles from './Header.module.scss';
+
+interface MenuItem {
+  menu: string;
+  submenu?: string[];
+  link: string;
+}
+
+const menuItems: MenuItem[] = [
+  {
+    menu: 'About Us',
+    link: '/',
+  },
+  {
+    menu: 'Article',
+    link: '/',
+  },
+  {
+    menu: 'Property',
+    submenu: ['House', 'Villa', 'Apartment'],
+    link: '/',
+  },
+];
+
 export const Header: React.FC = () => {
   return (
-    <header className="header">
-      <div className="header__container">
-        <div className="header__body">
-          <div className="header__logo">
+    <header className={styles.root}>
+      <div className={styles.container}>
+        <div className={styles.body}>
+          <div className={styles.logo}>
             <Link to="/">
               <svg
                 width="115"
@@ -31,29 +55,51 @@ export const Header: React.FC = () => {
               </svg>
             </Link>
           </div>
-          <div className="header__menu menu">
-            <nav className="menu__body">
-              <ul className="menu__list">
-                <li className="menu__link">
-                  <Link to="/">About Us</Link>
+          <nav className={styles.menu}>
+            <ul className={styles.menu__list}>
+              {menuItems.map((obj, index) => (
+                <li className={styles.menu__link} key={index}>
+                  {obj.submenu ? (
+                    <>
+                      <span>{obj.menu}</span>
+                      <ul className={styles.submenu__list}>
+                        {obj.submenu.map((subObj, subIndex) => (
+                          <li className={styles.submenu__link} key={subIndex}>
+                            <Link to={obj.link}>{subObj}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <Link to={obj.link}>{obj.menu}</Link>
+                  )}
                 </li>
-                <li className="menu__link">
-                  <Link to="/">Article</Link>
-                </li>
-                <li className="menu__link">
-                  <button>Property</button>
-                  <ul className="sub-menu__list">
-                    <li>House</li>
-                    <li>Villa</li>
-                    <li>Apartment </li>
-                  </ul>
-                </li>
-                <li className="menu__link">
-                  <Link to="/">Sign Up!</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              ))}
+              <li className={styles.menu__link}>
+                <Link to="/">About Us</Link>
+              </li>
+              <li className={styles.menu__link}>
+                <Link to="/">Article</Link>
+              </li>
+              <li className={styles.menu__link}>
+                <span>Property</span>
+                <ul className={styles.submenu__list}>
+                  <li>
+                    <Link to="/">House</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Villa</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Apartment</Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button className={styles.menu__btn}>
+              <Link to="/">Sign Up!</Link>
+            </button>
+          </nav>
         </div>
       </div>
     </header>

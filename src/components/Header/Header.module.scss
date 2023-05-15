@@ -1,0 +1,89 @@
+/** @format */
+
+@import '../../scss/variables';
+
+.root {
+  // .header__container
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+// .header__body
+
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 86px;
+  z-index: 5;
+}
+
+// .header__logo
+
+.logo {
+}
+
+// .header__menu
+
+.menu {
+}
+
+.menu {
+  // .menu__body
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  &__body {
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a,
+    a:visited,
+    span {
+      color: $mainLightBlueColor;
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+    a,
+    span {
+      display: block;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    margin: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 32px;
+  }
+  &__btn {
+    padding: 12px 24px;
+    background: $mainLightGreenColor;
+    border-radius: 32px;
+    margin-left: 44px;
+    a,
+    a:visited {
+      font-weight: 600;
+      color: $mainDarkGreenColor;
+    }
+  }
+}
+.submenu {
+  // .submenu__list
+
+  &__list {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+}
