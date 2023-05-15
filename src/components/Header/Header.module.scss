@@ -23,6 +23,22 @@
 // .header__logo
 
 .logo {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    gap: 14px;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: $mainDarkColor;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 // .header__menu
@@ -45,35 +61,68 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 44px;
     a,
     a:visited,
     span {
+      font-weight: 600;
       color: $mainLightBlueColor;
+      transition: all 0.3s ease 0s;
     }
   }
 
   // .menu__link
 
   &__link {
-    a,
-    span {
+    a {
       display: block;
       padding: 8px 16px;
-      cursor: pointer;
     }
     margin: 12px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 32px;
+    &:hover {
+      background: $mainLightGreenColor;
+      a,
+      a:visited {
+        color: $mainDarkGreenColor;
+      }
+    }
+    &_arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      span {
+        display: block;
+        padding: 8px 44px 8px 16px;
+        cursor: pointer;
+      }
+      margin: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 32px;
+      transition: all 0.3s ease 0s;
+      &.open {
+        background: $mainLightGreenColor;
+        span {
+          color: $mainDarkGreenColor;
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
   }
+
   &__btn {
     padding: 12px 24px;
-    background: $mainLightGreenColor;
+    background: $mainGreenColor;
     border-radius: 32px;
-    margin-left: 44px;
-    a,
-    a:visited {
-      font-weight: 600;
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    color: $mainLightBlueColor;
+    &:hover {
+      background: $mainLightGreenColor;
       color: $mainDarkGreenColor;
     }
   }
@@ -82,8 +131,48 @@
   // .submenu__list
 
   &__list {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    background: $mainGreenColor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, 0px);
+    transition: all 0.3s ease 0s;
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    &.open {
+      top: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__link {
+    padding: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background: $mainLightGreenColor;
+      a,
+      a:visited {
+        color: $mainDarkGreenColor;
+      }
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0px, -50%) rotate(90deg);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &_open {
+    transform: translate(0px, -50%) rotate(270deg);
+    svg {
+      path {
+        fill: $mainDarkGreenColor;
+      }
+    }
   }
 }

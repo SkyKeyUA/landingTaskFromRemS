@@ -2,8 +2,15 @@
 
 import React from 'react';
 import { Header } from '../components/Header';
+import { IconsEnum, SvgIcon } from '../components/SvgIcon';
 
 const Home: React.FC = () => {
+  const partnership: string[] = [
+    '../../img/partners/1.png',
+    '../../img/partners/2.png',
+    '../../img/partners/3.png',
+    '../../img/partners/4.png',
+  ];
   return (
     <div className="content">
       <Header />
@@ -19,23 +26,21 @@ const Home: React.FC = () => {
                 easier for you
               </div>
               <div className="place__input">
+                <SvgIcon className="place__svg" src={IconsEnum.location} />
                 <input type="text" placeholder="Search for the location you want!" />
+                <button className="place__btn">
+                  <span>Search</span>
+                  <SvgIcon size={24} src={IconsEnum.arrow} />
+                </button>
               </div>
               <div className="place__partnership partnership">
                 <div className="partnership__title">Our Partnership </div>
                 <div className="partnership__images">
-                  <div className="partnership__image">
-                    <img src="../../img/partners/1.png" alt="partner" />
-                  </div>
-                  <div className="partnership__image">
-                    <img src="../../img/partners/2.png" alt="partner" />
-                  </div>
-                  <div className="partnership__image">
-                    <img src="../../img/partners/3.png" alt="partner" />
-                  </div>
-                  <div className="partnership__image">
-                    <img src="../../img/partners/4.png" alt="partner" />
-                  </div>
+                  {partnership.map((obj, index) => (
+                    <div key={index} className="partnership__image">
+                      <img src={obj} alt="partner" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
