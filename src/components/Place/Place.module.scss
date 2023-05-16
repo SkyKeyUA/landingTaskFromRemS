@@ -1,0 +1,123 @@
+/** @format */
+
+@import '../../scss/variables';
+
+.root {
+  flex: 50% 1 1;
+  // .place__body
+}
+.body {
+  max-width: 496px;
+}
+
+// .place__title
+
+.title {
+  max-width: 400px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.25;
+  text-transform: capitalize;
+  text-shadow: -0 -1px 0 $mainDarkColor, 0 -1px 0 $mainDarkColor, -0 1px 0 $mainDarkColor,
+    0 1px 0 $mainDarkColor, -1px -0 0 $mainDarkColor, 1px -0 0 $mainDarkColor,
+    -1px 0 0 $mainDarkColor, 1px 0 0 $mainDarkColor, -1px -1px 0 $mainDarkColor,
+    1px -1px 0 $mainDarkColor, -1px 1px 0 $mainDarkColor, 1px 1px 0 $mainDarkColor,
+    -1px -1px 0 $mainDarkColor, 1px -1px 0 $mainDarkColor, -1px 1px 0 $mainDarkColor,
+    1px 1px 0 $mainDarkColor;
+  span {
+    // color: transparent;
+    // text-stroke: 1px $mainDarkColor;
+    // -webkit-text-fill-color: transparent;
+    // -webkit-text-stroke: 1px $mainDarkColor;
+    color: $mainLightBlueColor;
+    transition: all 0.3s ease 0s;
+  }
+  a,
+  a:visited {
+    color: $mainDarkColor;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: $mainGreenColor;
+      span {
+        color: $mainYellowColor;
+      }
+    }
+  }
+}
+
+// .place__text
+
+.text {
+  font-size: 16px;
+  line-height: 1.75;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+// .place__input
+
+.input {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  input {
+    width: 496px;
+    height: 56px;
+    font-weight: 500;
+    line-height: 1.57;
+    color: $mainLightGreyColor;
+    padding: 17px 129px 17px 64px;
+    border: 1px solid #e0e3eb;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    &:focus {
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translate(0px, -50%);
+}
+.btn {
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  position: absolute;
+  background: $mainGreenColor;
+  border-radius: 32px;
+  top: 50%;
+  right: 4px;
+  transform: translate(0px, -50%);
+  transition: all 0.3s ease 0s;
+  span {
+    font-weight: 600;
+    color: $mainLightBlueColor;
+    transition: all 0.3s ease 0s;
+  }
+  svg {
+    path {
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &:hover {
+    background: $mainLightGreenColor;
+    span {
+      color: $mainDarkGreenColor;
+    }
+    svg {
+      path {
+        fill: $mainDarkGreenColor;
+      }
+    }
+  }
+}

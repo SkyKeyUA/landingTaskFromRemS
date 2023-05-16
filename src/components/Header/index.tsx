@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { IconsEnum, SvgIcon } from '../SvgIcon';
 
-interface MenuItem {
+type MenuItem = {
   menu: string;
   submenu?: string[];
   link: string;
-}
+};
 
 const menuItems: MenuItem[] = [
   {

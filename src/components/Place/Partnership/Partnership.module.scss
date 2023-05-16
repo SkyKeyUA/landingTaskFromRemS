@@ -1,0 +1,30 @@
+/** @format */
+
+@import '../../../scss/variables';
+
+.root {
+  margin-top: 32px;
+  // .partnership__title
+}
+.title {
+  font-size: 16px;
+  line-height: 2;
+  color: $mainLightGreyColor;
+}
+
+// .partnership__images
+
+.images {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+// .partnership__image
+
+.image {
+  display: flex;
+  align-items: center;
+  width: 82.75px;
+  height: 64px;
+}
