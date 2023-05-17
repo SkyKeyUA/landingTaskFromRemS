@@ -3,6 +3,10 @@
 @import '../../scss/variables';
 
 .root {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  top: 46px;
   // .header__container
 }
 .container {
@@ -16,8 +20,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 86px;
-  z-index: 5;
 }
 
 // .header__logo

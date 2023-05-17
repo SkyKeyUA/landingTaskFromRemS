@@ -10,6 +10,7 @@ body {
   font-family: 'Lexend';
   font-size: 14px;
   color: $mainGreyColor;
+  position: relative;
 }
 //========================================================================================================================================================
 .content {
@@ -47,7 +48,6 @@ body {
 
   &__body {
     overflow: hidden;
-    margin-top: 100px;
   }
 
   // .content__container

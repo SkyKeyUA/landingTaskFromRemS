@@ -9,9 +9,8 @@ import { IconsEnum, SvgIcon } from '../components/SvgIcon';
 
 const Home: React.FC = () => {
   return (
-    <>
+    <main className="page__home">
       <section className="content">
-        <Header />
         <div className="content__body">
           <div className="content__container">
             <Place />
@@ -43,7 +42,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
