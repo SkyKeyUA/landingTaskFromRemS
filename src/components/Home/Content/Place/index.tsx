@@ -1,19 +1,13 @@
 /** @format */
 
 import React from 'react';
-import { IconsEnum, SvgIcon } from '../SvgIcon';
 
 import styles from './Place.module.scss';
 import { Partnership } from './Partnership';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 
 export const Place: React.FC = () => {
-  const partnership: string[] = [
-    '../../../img/partners/1.png',
-    '../../../img/partners/2.png',
-    '../../../img/partners/3.png',
-    '../../../img/partners/4.png',
-  ];
   return (
     <div className={styles.root}>
       <div className={styles.body}>

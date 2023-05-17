@@ -13,53 +13,305 @@ body {
   position: relative;
 }
 //========================================================================================================================================================
-.content {
-  position: relative;
-  background: url('../../public/img/header/image.jpg') 100% 0 no-repeat;
-  margin-bottom: 120px;
-  &::after {
-    content: '';
-    position: absolute;
-    width: 438px;
-    height: 494px;
-    left: 74px;
-    top: -162px;
-    z-index: -1;
-    background: #82f7ff;
-    opacity: 0.3;
-    filter: blur(60px);
-    transform: rotate(90deg);
+.page {
+  // .page__home
+
+  &__home {
   }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 438px;
-    height: 494px;
-    left: -173px;
-    top: -77px;
-    z-index: -1;
-    background: #82ffd2;
-    opacity: 0.3;
-    filter: blur(60px);
-    transform: rotate(90deg);
+}
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+.featured {
+  // .featured__container
+  overflow: hidden;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  // .content__body
+  // .featured__inner
+
+  &__inner {
+    margin-left: 40px;
+  }
+
+  // .featured__info
+
+  &__info {
+    color: $mainYellowColor;
+    line-height: 1.286;
+    font-weight: 500;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 12px;
+    &::before {
+      content: '';
+      position: absolute;
+      border-top: 1px solid $mainYellowColor;
+      width: 32px;
+      top: 50%;
+      left: -40px;
+      transform: translate(0px, -50%);
+    }
+  }
+
+  // .featured__body
 
   &__body {
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
-  // .content__container
+  // .featured__title
 
-  &__container {
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.5;
+    color: $mainDarkColor;
+  }
+
+  // .featured__categories
+
+  &__categories {
+  }
+
+  // .featured__items
+
+  &__items {
     display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  // .featured__item
+
+  &__item {
+    a,
+    a:visited {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px 12px 56px;
+      color: $mainLightGreyColor;
+      font-size: 18px;
+      line-height: 1.56;
+      font-weight: 500;
+      position: relative;
+      border: 1px solid #e0e3eb;
+      border-radius: 32px;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        background-color: $mainLightGreenColor;
+        color: $mainGreenColor;
+        path {
+          fill: $mainGreenColor;
+        }
+      }
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 27px;
+    transform: translate(0px, -60%);
   }
 }
 
 //========================================================================================================================================================
+.featuredHouse {
+  // .featuredHouse__slider
 
-[class*='__container'] {
-  max-width: 1200px;
-  margin: 0 auto;
+  &__slider {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  // .featuredHouse__slide
+
+  &__slide {
+  }
+
+  // .featuredHouse__body
+
+  &__body {
+    a,
+    a:visited {
+      color: $mainDarkBlueColor;
+      font-weight: 500;
+    }
+  }
+
+  // .featuredHouse__image
+
+  &__image {
+    margin-bottom: 24px;
+    position: relative;
+    a,
+    a:visited {
+      img {
+        transition: all 0.3s ease 0s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  // .featuredHouse__sort
+
+  &__sort {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    a,
+    a:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-weight: 500;
+      line-height: 1.286;
+      text-transform: capitalize;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+        span {
+          border: 1px solid $mainYellowColor;
+        }
+      }
+      span {
+        color: #ef4444;
+        border-radius: 32px;
+        background: #fee2e2;
+        padding: 8px 16px 8px 42px;
+      }
+    }
+    &.newhouse {
+      a,
+      a:visited {
+        span {
+          color: #1d4ed8;
+          background: #dbeafe;
+        }
+      }
+      .featuredHouse__svg {
+        path {
+          fill: #1d4ed8;
+        }
+      }
+    }
+    &.bestdeals {
+      a,
+      a:visited {
+        span {
+          color: $mainDarkGreenColor;
+          background: $mainLightGreenColor;
+        }
+      }
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translate(0px, -60%);
+  }
+
+  // .featuredHouse__title
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.33;
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .featuredHouse__text
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.68;
+    margin-bottom: 24px;
+    a,
+    a:visited {
+      color: $mainDarkGreyColor;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .featuredHouse__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  // .featuredHouse__user
+
+  &__user {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .featuredHouse__items
+
+  &__items {
+    margin-left: 16px;
+  }
+
+  // .featuredHouse__fullname
+
+  &__fullname {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 4px;
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .featuredHouse__location
+
+  &__location {
+    line-height: 1.57;
+    a,
+    a:visited {
+      color: $mainLightGreyColor;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.swiper {
+  overflow: visible;
 }

@@ -9,22 +9,18 @@ import { IconsEnum, SvgIcon } from '../SvgIcon';
 type MenuItem = {
   menu: string;
   submenu?: string[];
-  link: string;
 };
 
 const menuItems: MenuItem[] = [
   {
     menu: 'About Us',
-    link: '/',
   },
   {
     menu: 'Article',
-    link: '/',
   },
   {
     menu: 'Property',
     submenu: ['House', 'Villa', 'Apartment'],
-    link: '/',
   },
 ];
 
@@ -60,13 +56,13 @@ export const Header: React.FC = () => {
                         }>
                         {obj.submenu.map((subObj, subIndex) => (
                           <li className={styles.submenu__link} key={subIndex}>
-                            <Link to={obj.link}>{subObj}</Link>
+                            <Link to="/">{subObj}</Link>
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
-                    <Link to={obj.link}>{obj.menu}</Link>
+                    <Link to="/">{obj.menu}</Link>
                   )}
                 </li>
               ))}
