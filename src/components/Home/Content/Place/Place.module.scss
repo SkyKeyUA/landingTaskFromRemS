@@ -45,6 +45,10 @@
       }
     }
   }
+  &:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
 }
 
 // .place__text
@@ -120,5 +124,9 @@
         fill: $mainDarkGreenColor;
       }
     }
+  }
+  &:active {
+    -webkit-transform: translate(0px, -45%);
+    transform: translate(0px, -45%);
   }
 }

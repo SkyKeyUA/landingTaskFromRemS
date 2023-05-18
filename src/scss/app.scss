@@ -111,6 +111,10 @@ body {
           fill: $mainGreenColor;
         }
       }
+      &:active {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+      }
     }
   }
   &__svg {
@@ -123,6 +127,10 @@ body {
 
 //========================================================================================================================================================
 .featuredHouse {
+  &__swiper {
+    overflow: visible;
+  }
+  //
   // .featuredHouse__slider
 
   &__slider {
@@ -134,10 +142,7 @@ body {
 
   &__slide {
   }
-
-  // .featuredHouse__body
-
-  &__body {
+  .featuredHouse__body &__body {
     a,
     a:visited {
       color: $mainDarkBlueColor;
@@ -158,6 +163,12 @@ body {
       &:hover {
         img {
           transform: scale(1.1);
+        }
+      }
+      &:active {
+        img {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
         }
       }
     }
@@ -185,6 +196,10 @@ body {
         span {
           border: 1px solid $mainYellowColor;
         }
+      }
+      &:active {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
       }
       span {
         color: #ef4444;
@@ -236,6 +251,10 @@ body {
         opacity: 0.7;
       }
     }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 
   // .featuredHouse__text
@@ -251,6 +270,10 @@ body {
       &:hover {
         opacity: 0.7;
       }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
     }
   }
 
@@ -275,6 +298,10 @@ body {
         opacity: 0.7;
       }
     }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 
   // .featuredHouse__items
@@ -296,6 +323,10 @@ body {
         opacity: 0.7;
       }
     }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 
   // .featuredHouse__location
@@ -310,8 +341,9 @@ body {
         opacity: 0.7;
       }
     }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
-}
-.swiper {
-  overflow: visible;
 }

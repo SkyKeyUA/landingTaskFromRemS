@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react';
-import { Info } from './Info';
 
 import styles from './Content.module.scss';
 import { Place } from './Place';
+import { Info } from './Info/Info';
 
 export const Content: React.FC = () => {
   return (

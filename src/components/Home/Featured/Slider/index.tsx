@@ -105,6 +105,7 @@ export const Slider = () => {
   ];
   return (
     <Swiper
+      className="featuredHouse__swiper"
       spaceBetween={40}
       loop={true}
       autoplay={{
