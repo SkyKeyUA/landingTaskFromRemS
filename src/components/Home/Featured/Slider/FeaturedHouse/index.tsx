@@ -4,6 +4,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
 
+import './FeaturedHouse.scss';
+
 type FeaturedHouseProps = {
   image: string;
   icon: IconsEnum;

@@ -3,11 +3,18 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/scss';
+import styles from './Slider.module.scss';
 
-import { IconsEnum } from '../../../SvgIcon';
+import { Navigation } from 'swiper';
+
+import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 import { FeaturedHouse } from './FeaturedHouse';
+import { Link } from 'react-router-dom';
 
-import { Autoplay } from 'swiper';
+type categoriesProps = {
+  icon: IconsEnum;
+  category: string;
+};
 
 type FeaturedHouseProps = {
   image: string;
@@ -21,6 +28,20 @@ type FeaturedHouseProps = {
 };
 
 export const Slider = () => {
+  const categories: categoriesProps[] = [
+    {
+      icon: IconsEnum.house,
+      category: 'House',
+    },
+    {
+      icon: IconsEnum.villa,
+      category: 'Villa',
+    },
+    {
+      icon: IconsEnum.apartment,
+      category: 'Apartment',
+    },
+  ];
   const featuredHouses: FeaturedHouseProps[] = [
     {
       image: '/img/recommendation/1.jpg',
@@ -104,23 +125,69 @@ export const Slider = () => {
     },
   ];
   return (
-    <Swiper
-      className="featuredHouse__swiper"
-      spaceBetween={40}
-      loop={true}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: true,
-      }}
-      modules={[Autoplay]}
-      slidesPerView={3.16}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}>
-      {featuredHouses.map((obj: any, index: number) => (
-        <SwiperSlide key={index}>
-          <FeaturedHouse {...obj} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <div className={styles.body}>
+        <div className={styles.left}>
+          <div className={styles.title}>Featured House</div>
+          <div className={styles.categories}>
+            <ul className={styles.items}>
+              {categories.map((obj, index) => (
+                <li key={index} className={styles.item}>
+                  <Link to="/">
+                    <SvgIcon className={styles.svg} size={18} src={obj.icon} />
+                    <span>{obj.category}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.prev}>
+            <SvgIcon size={28} src={IconsEnum.arrow} />
+          </div>
+          <div className={styles.next}>
+            <SvgIcon size={28} src={IconsEnum.arrow} />
+          </div>
+        </div>
+      </div>
+      <Swiper
+        className={styles.swiper}
+        spaceBetween={40}
+        // slidesPerGroup={3}
+        slidesPerView={3.16}
+        modules={[Navigation]}
+        navigation={{
+          nextEl: `.${styles.next}`,
+          prevEl: `.${styles.prev}`,
+          disabledClass: 'swiper-button-disabled',
+        }}
+        loop={true}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3.16,
+            spaceBetween: 40,
+          },
+        }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}>
+        {featuredHouses.map((obj: any, index: number) => (
+          <SwiperSlide key={index}>
+            <FeaturedHouse {...obj} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 };

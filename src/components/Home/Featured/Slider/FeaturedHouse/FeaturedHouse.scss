@@ -1,0 +1,210 @@
+/** @format */
+
+@import '../../../../../scss/variables';
+
+.featuredHouse {
+  &__body {
+    a,
+    a:visited {
+      color: $mainDarkBlueColor;
+      font-weight: 500;
+    }
+  }
+
+  // .featuredHouse__image
+
+  &__image {
+    margin-bottom: 24px;
+    position: relative;
+    a,
+    a:visited {
+      img {
+        transition: all 0.3s ease 0s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      &:active {
+        img {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  // .featuredHouse__sort
+
+  &__sort {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    a,
+    a:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-weight: 500;
+      line-height: 1.286;
+      text-transform: capitalize;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+        span {
+          border: 1px solid $mainYellowColor;
+        }
+      }
+      &:active {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      span {
+        color: #ef4444;
+        border-radius: 32px;
+        background: #fee2e2;
+        padding: 8px 16px 8px 42px;
+      }
+    }
+    &.newhouse {
+      a,
+      a:visited {
+        span {
+          color: #1d4ed8;
+          background: #dbeafe;
+        }
+      }
+      .featuredHouse__svg {
+        path {
+          fill: #1d4ed8;
+        }
+      }
+    }
+    &.bestdeals {
+      a,
+      a:visited {
+        span {
+          color: $mainDarkGreenColor;
+          background: $mainLightGreenColor;
+        }
+      }
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translate(0px, -60%);
+  }
+
+  // .featuredHouse__title
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.33;
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+
+  // .featuredHouse__text
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.68;
+    margin-bottom: 24px;
+    a,
+    a:visited {
+      color: $mainDarkGreyColor;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+
+  // .featuredHouse__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  // .featuredHouse__user
+
+  &__user {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+
+  // .featuredHouse__items
+
+  &__items {
+    margin-left: 16px;
+  }
+
+  // .featuredHouse__fullname
+
+  &__fullname {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 4px;
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+
+  // .featuredHouse__location
+
+  &__location {
+    line-height: 1.57;
+    a,
+    a:visited {
+      color: $mainLightGreyColor;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+}

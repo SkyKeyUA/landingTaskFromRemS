@@ -1,0 +1,41 @@
+/** @format */
+
+@import '../../../scss/variables';
+
+.root {
+}
+.body {
+  overflow: hidden;
+}
+// .featured__container
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// .featured__inner
+
+.inner {
+  margin-left: 40px;
+}
+
+// .featured__info
+
+.info {
+  color: $mainYellowColor;
+  line-height: 1.286;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 12px;
+  &::before {
+    content: '';
+    position: absolute;
+    border-top: 1px solid $mainYellowColor;
+    width: 32px;
+    top: 50%;
+    left: -40px;
+    transform: translate(0px, -50%);
+  }
+}
