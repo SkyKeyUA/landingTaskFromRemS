@@ -1,6 +1,7 @@
 /** @format */
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
 
 import 'swiper/scss';
 import styles from './Slider.module.scss';
@@ -9,138 +10,36 @@ import { Navigation } from 'swiper';
 
 import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 import { FeaturedHouse } from './FeaturedHouse';
-import { Link } from 'react-router-dom';
+import { Categories } from './Categories';
+import { useSelector } from 'react-redux';
+import { selectFeaturedHouseData } from '../../../../redux/slices/featuredHouse/selectors';
+import { useAppDispatch } from '../../../../redux/store';
+import { fetchFeaturedHouse } from '../../../../redux/slices/featuredHouse/asyncActions';
+import { Skeleton } from './FeaturedHouse/Skeleton';
+import { selectFilter } from '../../../../redux/slices/filter/selectors';
+import { setCategoryId } from '../../../../redux/slices/filter/slice';
 
-type categoriesProps = {
-  icon: IconsEnum;
-  category: string;
-};
+export const Slider: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const { categoryId } = useSelector(selectFilter);
+  const { items, status } = useSelector(selectFeaturedHouseData);
 
-type FeaturedHouseProps = {
-  image: string;
-  icon: IconsEnum;
-  sort: string;
-  title: string;
-  text: string;
-  user: string;
-  fullname: string;
-  location: string;
-};
-
-export const Slider = () => {
-  const categories: categoriesProps[] = [
-    {
-      icon: IconsEnum.house,
-      category: 'House',
-    },
-    {
-      icon: IconsEnum.villa,
-      category: 'Villa',
-    },
-    {
-      icon: IconsEnum.apartment,
-      category: 'Apartment',
-    },
-  ];
-  const featuredHouses: FeaturedHouseProps[] = [
-    {
-      image: '/img/recommendation/1.jpg',
-      icon: IconsEnum.popular,
-      sort: 'Popular',
-      title: 'Roselands House',
-      text: '$ 35.000.000',
-      user: '/img/users/3.png',
-      fullname: 'Dianne Russell',
-      location: 'Manchester, Kentucky',
-    },
-    {
-      image: '/img/recommendation/2.jpg',
-      icon: IconsEnum.house,
-      sort: 'New house',
-      title: 'Woodlandside',
-      text: '$ 20.000.000',
-      user: '/img/users/6.png',
-      fullname: 'Robert Fox',
-      location: 'Dr. San Jose, South Dakota',
-    },
-    {
-      image: '/img/recommendation/3.jpg',
-      icon: IconsEnum.bestDeals,
-      sort: 'Best Deals',
-      title: 'The Old Lighthouse',
-      text: '$ 44.000.000',
-      user: '/img/users/7.png',
-      fullname: 'Ronald Richards',
-      location: 'Santa Ana, Illinois',
-    },
-    {
-      image: '/img/recommendation/4.jpg',
-      icon: IconsEnum.popular,
-      sort: 'Popular',
-      title: "Cosmo's House",
-      text: '$ 22.000.000',
-      user: '/img/users/8.png',
-      fullname: 'Jenny Wilson',
-      location: 'Preston Rd. Inglewood, Maine 98380',
-    },
-    {
-      image: '/img/recommendation/1.jpg',
-      icon: IconsEnum.popular,
-      sort: 'Popular',
-      title: 'Roselands House',
-      text: '$ 35.000.000',
-      user: '/img/users/3.png',
-      fullname: 'Dianne Russell',
-      location: 'Manchester, Kentucky',
-    },
-    {
-      image: '/img/recommendation/2.jpg',
-      icon: IconsEnum.house,
-      sort: 'New house',
-      title: 'Woodlandside',
-      text: '$ 20.000.000',
-      user: '/img/users/6.png',
-      fullname: 'Robert Fox',
-      location: 'Dr. San Jose, South Dakota',
-    },
-    {
-      image: '/img/recommendation/3.jpg',
-      icon: IconsEnum.bestDeals,
-      sort: 'Best Deals',
-      title: 'The Old Lighthouse',
-      text: '$ 44.000.000',
-      user: '/img/users/7.png',
-      fullname: 'Ronald Richards',
-      location: 'Santa Ana, Illinois',
-    },
-    {
-      image: '/img/recommendation/4.jpg',
-      icon: IconsEnum.popular,
-      sort: 'Popular',
-      title: "Cosmo's House",
-      text: '$ 22.000.000',
-      user: '/img/users/8.png',
-      fullname: 'Jenny Wilson',
-      location: 'Preston Rd. Inglewood, Maine 98380',
-    },
-  ];
+  const onClickCategory = React.useCallback((idx: number) => {
+    dispatch(setCategoryId(idx));
+  }, []);
+  React.useEffect(() => {
+    dispatch(fetchFeaturedHouse());
+  }, [dispatch]);
+  const skeletons = [...new Array(3)].map((_, index) => <Skeleton key={index} />);
+  const itemsFilter = items.filter((obj) => {
+    return obj.category === categoryId + 1;
+  });
   return (
     <>
       <div className={styles.body}>
         <div className={styles.left}>
           <div className={styles.title}>Featured House</div>
-          <div className={styles.categories}>
-            <ul className={styles.items}>
-              {categories.map((obj, index) => (
-                <li key={index} className={styles.item}>
-                  <Link to="/">
-                    <SvgIcon className={styles.svg} size={18} src={obj.icon} />
-                    <span>{obj.category}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Categories categoryId={categoryId} onClickCategory={onClickCategory} />
         </div>
         <div className={styles.right}>
           <div className={styles.prev}>
@@ -182,11 +81,13 @@ export const Slider = () => {
         }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}>
-        {featuredHouses.map((obj: any, index: number) => (
-          <SwiperSlide key={index}>
-            <FeaturedHouse {...obj} />
-          </SwiperSlide>
-        ))}
+        {status === 'loading'
+          ? skeletons
+          : itemsFilter.map((obj: any) => (
+              <SwiperSlide key={obj.id}>
+                <FeaturedHouse {...obj} />
+              </SwiperSlide>
+            ))}
       </Swiper>
     </>
   );

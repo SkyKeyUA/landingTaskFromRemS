@@ -1,0 +1,47 @@
+/** @format */
+
+import React from 'react';
+import styles from './Categories.module.scss';
+import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
+import { Link } from 'react-router-dom';
+
+type CategoriesProps = {
+  categoryId: number;
+  onClickCategory: (i: number) => void;
+};
+
+export const Categories: React.FC<CategoriesProps> = React.memo(
+  ({ categoryId, onClickCategory }) => {
+    const categories = [
+      {
+        icon: IconsEnum.house,
+        category: 'House',
+      },
+      {
+        icon: IconsEnum.villa,
+        category: 'Villa',
+      },
+      {
+        icon: IconsEnum.apartment,
+        category: 'Apartment',
+      },
+    ];
+    return (
+      <div className={styles.root}>
+        <ul className={styles.items}>
+          {categories.map((obj, i) => (
+            <li
+              key={i}
+              onClick={() => onClickCategory(i)}
+              className={categoryId === i ? `${styles.item} ${styles.active}` : styles.item}>
+              <Link to="/">
+                <SvgIcon className={styles.svg} size={18} src={obj.icon} />
+                <span>{obj.category}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  },
+);

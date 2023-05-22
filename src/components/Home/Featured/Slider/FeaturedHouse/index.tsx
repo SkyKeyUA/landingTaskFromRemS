@@ -8,13 +8,18 @@ import './FeaturedHouse.scss';
 
 type FeaturedHouseProps = {
   image: string;
-  icon: IconsEnum;
+  icon: string;
   sort: string;
   title: string;
   text: string;
   user: string;
   fullname: string;
   location: string;
+};
+
+type SvgProps = {
+  text: string;
+  iconEnum: IconsEnum;
 };
 
 export const FeaturedHouse: React.FC<FeaturedHouseProps> = ({
@@ -27,6 +32,20 @@ export const FeaturedHouse: React.FC<FeaturedHouseProps> = ({
   fullname,
   location,
 }) => {
+  const svgIcon: SvgProps[] = [
+    {
+      text: 'popular',
+      iconEnum: IconsEnum.popular,
+    },
+    {
+      text: 'house',
+      iconEnum: IconsEnum.house,
+    },
+    { text: 'bestDeals', iconEnum: IconsEnum.bestDeals },
+  ];
+
+  const selectedSvgIcon = svgIcon.find((obj) => obj.text === icon);
+
   return (
     <div className="featuredHouse__body">
       <div className="featuredHouse__image">
@@ -35,7 +54,11 @@ export const FeaturedHouse: React.FC<FeaturedHouseProps> = ({
         </Link>
         <div className={`featuredHouse__sort ${sort.toLocaleLowerCase().split(' ').join('')}`}>
           <Link to="/">
-            <SvgIcon size={14} className="featuredHouse__svg" src={icon} />
+            <SvgIcon
+              size={14}
+              className="featuredHouse__svg"
+              src={(selectedSvgIcon && selectedSvgIcon.iconEnum) as IconsEnum}
+            />
             <span>{sort}</span>
           </Link>
         </div>
