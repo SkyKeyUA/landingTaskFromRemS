@@ -50,45 +50,47 @@ export const Slider: React.FC = () => {
           </div>
         </div>
       </div>
-      <Swiper
-        className={styles.swiper}
-        spaceBetween={40}
-        // slidesPerGroup={3}
-        slidesPerView={3.16}
-        modules={[Navigation]}
-        navigation={{
-          nextEl: `.${styles.next}`,
-          prevEl: `.${styles.prev}`,
-          disabledClass: 'swiper-button-disabled',
-        }}
-        loop={true}
-        breakpoints={{
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 3.16,
-            spaceBetween: 40,
-          },
-        }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}>
-        {status === 'loading'
-          ? skeletons
-          : itemsFilter.map((obj: any) => (
-              <SwiperSlide key={obj.id}>
-                <FeaturedHouse {...obj} />
-              </SwiperSlide>
-            ))}
-      </Swiper>
+      {status === 'loading' ? (
+        skeletons
+      ) : (
+        <Swiper
+          className={styles.swiper}
+          spaceBetween={40}
+          // slidesPerGroup={3}
+          slidesPerView={3.16}
+          modules={[Navigation]}
+          navigation={{
+            nextEl: `.${styles.next}`,
+            prevEl: `.${styles.prev}`,
+            disabledClass: 'swiper-button-disabled',
+          }}
+          loop={true}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 24,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3.16,
+              spaceBetween: 40,
+            },
+          }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}>
+          {itemsFilter.map((obj: any) => (
+            <SwiperSlide key={obj.id}>
+              <FeaturedHouse {...obj} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </>
   );
 };

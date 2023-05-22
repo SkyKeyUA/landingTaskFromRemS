@@ -6,9 +6,9 @@ export const Skeleton: React.FC = () => {
   return (
     <ContentLoader
       speed={2}
-      width={340}
-      height={552}
-      viewBox="0 0 380 552"
+      width={380}
+      height={642}
+      viewBox="0 0 380 642"
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb">
       <rect x="0" y="0" rx="32" ry="32" width="340" height="382" />
