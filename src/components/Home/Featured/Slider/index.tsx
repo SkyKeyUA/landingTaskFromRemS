@@ -57,6 +57,8 @@ export const Slider: React.FC = () => {
           className={styles.swiper}
           spaceBetween={40}
           // slidesPerGroup={3}
+          noSwiping={true}
+          noSwipingClass={styles.swiper}
           slidesPerView={3.16}
           modules={[Navigation]}
           navigation={{

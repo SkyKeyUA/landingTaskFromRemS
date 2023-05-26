@@ -52,6 +52,8 @@ export const InfoSlider = () => {
       className={styles.swiper}
       spaceBetween={16}
       loop={true}
+      noSwiping={true}
+      noSwipingClass={styles.swiper}
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
