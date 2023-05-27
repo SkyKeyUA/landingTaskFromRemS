@@ -67,6 +67,7 @@
 .title {
   a,
   a:visited {
+    display: inline-block;
     color: $mainDarkColor;
     font-weight: 600;
     font-size: 16px;
@@ -75,10 +76,10 @@
     &:hover {
       opacity: 0.6;
     }
-  }
-  &:active {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 }
 
@@ -87,6 +88,7 @@
 .text {
   a,
   a:visited {
+    display: inline-block;
     font-size: 12px;
     line-height: 1.67;
     color: $mainInfoColor;
@@ -94,9 +96,9 @@
     &:hover {
       opacity: 0.6;
     }
-  }
-  &:active {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 }
