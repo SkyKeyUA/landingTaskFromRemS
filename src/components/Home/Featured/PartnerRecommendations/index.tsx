@@ -5,8 +5,23 @@ import React from 'react';
 import styles from './PartnerRecommendations.module.scss';
 import { HouseDetail } from './HouseDetail';
 import { User } from './User';
+import { Link } from 'react-router-dom';
 
 export const PartnerRecommendations: React.FC = () => {
+  const images = [
+    {
+      image: '/img/details/1.jpg',
+    },
+    {
+      image: '/img/details/2.jpg',
+    },
+    {
+      image: '/img/details/3.jpg',
+    },
+    {
+      image: '/img/details/4.jpg',
+    },
+  ];
   return (
     <div className={styles.root}>
       <div className={styles.inner}>
@@ -21,7 +36,13 @@ export const PartnerRecommendations: React.FC = () => {
         </div>
         <User />
       </div>
-      <div className={styles.images}></div>
+      <div className={styles.images}>
+        {images.map((obj, i) => (
+          <Link key={i} to="/" className={`${styles.image} ${styles[`image_${i + 1}`]}`}>
+            <img src={obj.image} alt="Image details" />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

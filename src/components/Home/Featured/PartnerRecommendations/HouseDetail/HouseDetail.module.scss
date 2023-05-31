@@ -9,11 +9,12 @@
   line-height: 1.75;
   opacity: 0.75;
   color: $mainDarkColor;
+  margin-bottom: 16px;
 }
 .info {
   display: flex;
   align-items: center;
-  gap: 53px;
+  flex-wrap: wrap;
 }
 .body {
   display: flex;
