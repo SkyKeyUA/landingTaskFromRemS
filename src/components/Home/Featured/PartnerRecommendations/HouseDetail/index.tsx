@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './HouseDetail.module.scss';
 import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
+import { Link } from 'react-router-dom';
 
 type DetailsProps = {
   id: number;
@@ -44,9 +45,12 @@ export const HouseDetail: React.FC = () => {
       <div className={styles.info}>
         {details.map((obj) => (
           <div key={obj.id} className={styles.body}>
-            <SvgIcon className={styles.svg} src={obj.iconEnum} />
-            <div className={styles.rooms}>{obj.rooms}</div>
-            <div className={styles.text}>{obj.title}</div>
+            <Link to="/">
+              <SvgIcon className={styles.svg} src={obj.iconEnum} />
+              <div className={styles.rooms}>
+                {obj.rooms} {obj.title}
+              </div>
+            </Link>
           </div>
         ))}
       </div>

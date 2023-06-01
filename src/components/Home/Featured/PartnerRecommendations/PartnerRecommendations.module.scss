@@ -1,6 +1,6 @@
 /** @format */
 
-@import '../../../../scss/variables';
+@import 'src/scss/variables';
 
 .root {
   margin-top: 120px;
@@ -11,8 +11,6 @@
 .inner {
   flex: 0 1 40.34%;
   height: 459px;
-}
-.body {
 }
 .info {
   color: $mainYellowColor;
@@ -36,6 +34,9 @@
   font-size: 32px;
   line-height: 1.5;
   color: $mainDarkColor;
+}
+.body {
+  max-width: 440px;
 }
 .text {
   font-size: 16px;

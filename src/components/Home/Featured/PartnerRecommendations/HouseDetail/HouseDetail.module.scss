@@ -15,15 +15,39 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid $mainLightBlueColor;
 }
 .body {
   display: flex;
-  flex: 1 1 50%;
+  flex: 1 1 35%;
   align-items: center;
+  transition: all 0.3s ease 0s;
+  a,
+  a:visited {
+    display: inline-flex;
+    align-items: center;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
 }
 .svg {
+  margin-right: 16px;
+  svg {
+    color: $mainLightGreyColor;
+  }
 }
 .rooms {
-}
-.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: capitalize;
+  color: $mainDarkGreyColor;
 }

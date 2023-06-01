@@ -1,0 +1,90 @@
+/** @format */
+
+@import '/src/scss/variables';
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a,
+  a:visited {
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+}
+.body {
+  display: flex;
+}
+.image {
+  margin-right: 24px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fullName {
+  font-size: 18px;
+  line-height: 1.33;
+  a,
+  a:visited {
+    color: $mainDarkBlueColor;
+  }
+}
+.position {
+  font-size: 16px;
+  line-height: 1.5;
+  a,
+  a:visited {
+    color: $mainLightGreyColor;
+  }
+}
+.btn {
+  display: flex;
+  padding: 13px 16px 13px 56px;
+  position: relative;
+  border-radius: 32px;
+  background: $mainGreenColor;
+  transition: all 0.3s ease 0s;
+  span {
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.57;
+    color: $mainWhiteColor;
+  }
+  svg {
+    path {
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &:hover {
+    background: $mainLightGreenColor;
+    span {
+      color: $mainDarkGreenColor;
+    }
+    svg {
+      path {
+        fill: $mainDarkGreenColor;
+      }
+    }
+  }
+  &:active {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+}
+.svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
