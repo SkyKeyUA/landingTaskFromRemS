@@ -4,22 +4,22 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 
 import 'swiper/scss';
-import styles from './Slider.module.scss';
+import styles from './FeaturedHouse.module.scss';
 
 import { Navigation } from 'swiper';
 
 import { IconsEnum, SvgIcon } from '../../../SvgIcon';
-import { FeaturedHouse } from './FeaturedHouse';
+import { Card } from './Card';
 import { Categories } from './Categories';
 import { useSelector } from 'react-redux';
 import { selectFeaturedHouseData } from '../../../../redux/slices/featuredHouse/selectors';
 import { useAppDispatch } from '../../../../redux/store';
 import { fetchFeaturedHouse } from '../../../../redux/slices/featuredHouse/asyncActions';
-import { Skeleton } from './FeaturedHouse/Skeleton';
+import { Skeleton } from './Card/Skeleton';
 import { selectFilter } from '../../../../redux/slices/filter/selectors';
 import { setCategoryId } from '../../../../redux/slices/filter/slice';
 
-export const Slider: React.FC = () => {
+export const FeaturedHouse: React.FC = () => {
   const dispatch = useAppDispatch();
   const { categoryId } = useSelector(selectFilter);
   const { items, status } = useSelector(selectFeaturedHouseData);
@@ -88,7 +88,7 @@ export const Slider: React.FC = () => {
           onSwiper={(swiper) => console.log(swiper)}>
           {itemsFilter.map((obj: any) => (
             <SwiperSlide key={obj.id}>
-              <FeaturedHouse {...obj} />
+              <Card {...obj} />
             </SwiperSlide>
           ))}
         </Swiper>

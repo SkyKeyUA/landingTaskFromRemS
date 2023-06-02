@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './User.module.scss';
-import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../../../../SvgIcon';
 export const User: React.FC = () => {
   return (
     <div className={styles.inner}>
@@ -20,10 +20,10 @@ export const User: React.FC = () => {
           </div>
         </div>
       </div>
-      <button className={styles.btn}>
+      <Link to="tel:+1234567890" className={styles.btn}>
         <SvgIcon className={styles.svg} src={IconsEnum.call} />
         <span>Contact Now</span>
-      </button>
+      </Link>
     </div>
   );
 };

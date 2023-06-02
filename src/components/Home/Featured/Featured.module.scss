@@ -3,6 +3,35 @@
 @import '../../../scss/variables';
 
 .root {
+  position: relative;
+  margin-bottom: 120px;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    right: -94px;
+    top: 612px;
+    z-index: -1;
+    background: #ff9882;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    right: -153px;
+    top: 734px;
+    background: #fffa82;
+    opacity: 0.3;
+    z-index: -1;
+    filter: blur(60px);
+    transform: rotate(90deg);
+  }
 }
 .body {
   overflow: hidden;
@@ -20,9 +49,9 @@
   margin-left: 40px;
 }
 
-// .featured__info
+// .featured__heading
 
-.info {
+.heading {
   color: $mainYellowColor;
   line-height: 1.286;
   font-weight: 500;

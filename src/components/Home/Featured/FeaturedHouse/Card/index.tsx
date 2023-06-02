@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
 
-import './FeaturedHouse.scss';
+import './Card.scss';
 
 type FeaturedHouseProps = {
   image: string;
@@ -22,7 +22,7 @@ type SvgProps = {
   iconEnum: IconsEnum;
 };
 
-export const FeaturedHouse: React.FC<FeaturedHouseProps> = ({
+export const Card: React.FC<FeaturedHouseProps> = ({
   image,
   icon,
   sort,

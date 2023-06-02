@@ -3,6 +3,7 @@
 .root {
   position: relative;
   background: url('../../../../public/img/header/image.jpg') 100% 0 no-repeat;
+  overflow: hidden;
   margin-bottom: 120px;
   &::after {
     content: '';
@@ -30,11 +31,6 @@
     filter: blur(60px);
     transform: rotate(90deg);
   }
-}
-// .content__body
-
-.body {
-  overflow: hidden;
 }
 
 // .content__container
