@@ -38,7 +38,7 @@ export const FeaturedHouse: React.FC = () => {
     <>
       <div className={styles.body}>
         <div className={styles.left}>
-          <div className={styles.title}>Featured House</div>
+          <div className={`home__title ${styles.title}`}>Featured House</div>
           <Categories categoryId={categoryId} onClickCategory={onClickCategory} />
         </div>
         <div className={styles.right}>

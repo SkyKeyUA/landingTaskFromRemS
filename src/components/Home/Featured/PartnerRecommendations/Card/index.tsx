@@ -26,8 +26,8 @@ export const Card: React.FC = () => {
   return (
     <div className={styles.inner}>
       <div className={styles.info}>
-        <div className={styles.heading}>Ready to Sell!</div>
-        <div className={styles.title}>Let’s tour and see our house!</div>
+        <div className={`home__heading ${styles.heading}`}>Ready to Sell!</div>
+        <div className={`home__title ${styles.title}`}>Let’s tour and see our house!</div>
         <div className={styles.body}>
           <div className={styles.text}>
             Houses recommended by our partners that have been curated to become the home of your

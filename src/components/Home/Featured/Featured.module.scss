@@ -52,12 +52,6 @@
 // .featured__heading
 
 .heading {
-  color: $mainYellowColor;
-  line-height: 1.286;
-  font-weight: 500;
-  text-transform: capitalize;
-  position: relative;
-  margin-bottom: 12px;
   &::before {
     content: '';
     position: absolute;

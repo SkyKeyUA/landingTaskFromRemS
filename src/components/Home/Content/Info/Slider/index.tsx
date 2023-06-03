@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/scss';
-import styles from './InfoCard.module.scss';
+import styles from './InfoSlider.module.scss';
 
 import { Autoplay } from 'swiper';
 import { InfoCard } from './Card';
@@ -14,7 +14,7 @@ type InfoCardProps = {
   text: string;
 };
 
-export const InfoSlider = () => {
+export const InfoSlider: React.FC = () => {
   const infoCards: InfoCardProps[] = [
     {
       images: ['/img/users/1.png', '/img/users/2.png', '/img/users/3.png'],

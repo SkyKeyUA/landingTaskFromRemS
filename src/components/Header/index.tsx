@@ -67,9 +67,7 @@ export const Header: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <button className={styles.menu__btn}>
-              <span>Sign Up!</span>
-            </button>
+            <button className={styles.menu__btn}>Sign Up!</button>
           </nav>
         </div>
       </div>

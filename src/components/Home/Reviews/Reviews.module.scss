@@ -1,0 +1,53 @@
+/** @format */
+
+@import '/src/scss/variables';
+
+// .reviews__root
+
+.root {
+  overflow: hidden;
+}
+
+// .reviews__containter
+
+.containter {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+// .reviews__heading
+
+.heading {
+  margin-top: 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    border-top: 1px solid $mainYellowColor;
+    width: 32px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+// .reviews__title
+
+.title {
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+// .reviews__swiper
+
+.swiper {
+  max-width: 740px;
+  overflow: visible;
+}
+
+// .reviews__card
+
+.card {
+}

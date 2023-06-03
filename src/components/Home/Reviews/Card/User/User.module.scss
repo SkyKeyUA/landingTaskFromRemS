@@ -1,0 +1,90 @@
+/** @format */
+
+@import '/src/scss/variables';
+
+// .user__root
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a,
+  a:visited {
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+}
+
+// .user__body
+
+.body {
+  display: flex;
+  align-items: center;
+}
+
+// .user__image
+
+.image {
+  margin-right: 24px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// .user__items
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+// .user__fullName
+
+.fullName {
+  font-size: 14px;
+  line-height: 1.57;
+  a,
+  a:visited {
+    color: $mainDarkBlueColor;
+  }
+}
+
+// .user__position
+
+.position {
+  font-size: 14px;
+  line-height: 1.57;
+  a,
+  a:visited {
+    color: $mainLightGreyColor;
+  }
+}
+
+// .user__rating
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $mainDarkGreyColor;
+  }
+}
+
+// .user__svg
+
+.svg {
+  margin-right: 16px;
+}
