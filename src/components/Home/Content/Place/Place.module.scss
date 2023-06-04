@@ -68,11 +68,10 @@
   cursor: pointer;
   input {
     width: 496px;
-    height: 56px;
     font-weight: 500;
     line-height: 1.57;
     color: $mainLightGreyColor;
-    padding: 17px 129px 17px 64px;
+    padding: 16.5px 129px 16.5px 64px;
     border: 1px solid #e0e3eb;
     border-radius: 32px;
     cursor: pointer;
@@ -83,6 +82,9 @@
     &:focus {
       box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     }
+  }
+  input::placeholder {
+    color: $mainLightGreyColor;
   }
 }
 .svg {

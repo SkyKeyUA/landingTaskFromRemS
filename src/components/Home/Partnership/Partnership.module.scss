@@ -1,0 +1,120 @@
+/** @format */
+
+@import '/src/scss/variables';
+
+// .partnership__root
+
+.root {
+  padding-top: 120px;
+  margin-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    left: -170px;
+    top: 65px;
+    background: #82ffe8;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    left: -142px;
+    top: 322px;
+    background: #c8ff82;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+}
+
+// .partnership__container
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// .partnership____inner
+.inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+// .partnership__heading
+
+.heading {
+  color: $mainYellowColor;
+  line-height: 1.286;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 12px;
+  margin-top: 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    border-top: 1px solid $mainYellowColor;
+    width: 32px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+// .partnership__title
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.25;
+  text-transform: capitalize;
+  color: $mainDarkColor;
+  margin-bottom: 24px;
+  max-width: 425px;
+  text-align: center;
+}
+
+// .partnership__btn
+
+.btn {
+  padding: 12.5px 18px;
+  line-height: 1.57;
+  background: $mainGreenColor;
+  border-radius: 32px;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  color: $mainWhiteColor;
+  &:hover {
+    background: $mainLightGreenColor;
+    color: $mainDarkGreenColor;
+  }
+  &:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+}
+
+// .partnership__body
+.body {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+// .partnership____cards
+.cards {
+  flex: 0 0 47.77%;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
