@@ -3,7 +3,6 @@
 .root {
   position: relative;
   background: url('../../../../public/img/header/image.jpg') 100% 0 no-repeat;
-  overflow: hidden;
   margin-bottom: 120px;
   &::after {
     content: '';

@@ -12,12 +12,17 @@ body {
   font-weight: 400;
   color: $mainGreyColor;
   position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 //========================================================================================================================================================
 .page {
   // .page__home
 
   &__home {
+    flex: 1 1 auto;
   }
 }
 //========================================================================================================================================================
@@ -77,102 +82,3 @@ body {
   background: var(--swiper-pagination-color, $mainDarkGreyColor);
 }
 //========================================================================================================================================================
-
-.subscribe {
-  // .subscribe__root
-
-  &__root {
-  }
-
-  // .subscribe__container
-
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: url('../../public/img/info/bginfo.svg') 100% 0 no-repeat;
-    min-height: 312px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 32px;
-  }
-
-  // .subscribe__title
-
-  &__title {
-    max-width: 424px;
-    margin-bottom: 32px;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  // .subscribe__form
-
-  &__form {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    input {
-      width: 496px;
-      font-weight: 500;
-      line-height: 1.57;
-      color: $mainLightGreyColor;
-      padding: 15.5px 129px 15.5px 64px;
-      border: 1px solid #e0e3eb;
-      border-radius: 32px;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      &:hover {
-        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-      }
-      &:focus {
-        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-      }
-    }
-    input::placeholder {
-      color: $mainLightGreyColor;
-    }
-  }
-
-  // .subscribe__svg
-  &__svg {
-    position: absolute;
-    top: 50%;
-    left: 24px;
-    transform: translate(0px, -50%);
-  }
-
-  // .subscribe__input
-
-  &__input {
-  }
-
-  // .subscribe__btn
-
-  &__btn {
-    line-height: 1.57;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12.5px 16px;
-    position: absolute;
-    background: $mainGreenColor;
-    border-radius: 32px;
-    top: 50%;
-    right: 4px;
-    transform: translate(0px, -50%);
-    transition: all 0.3s ease 0s;
-    font-weight: 600;
-    color: $mainWhiteColor;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      background: $mainLightGreenColor;
-      color: $mainDarkGreenColor;
-    }
-    &:active {
-      -webkit-transform: translate(0px, -48%);
-      transform: translate(0px, -48%);
-    }
-  }
-}

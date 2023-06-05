@@ -1,0 +1,139 @@
+/** @format */
+
+@import '/src/scss/variables';
+
+// .footer__root
+
+.root {
+  padding: 120px 0px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    right: 46px;
+    bottom: -149px;
+    background: #b9ff82;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 494px;
+    right: -200px;
+    bottom: -84px;
+    background: #82bbff;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+}
+
+// .footer__containter
+
+.containter {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+// .footer__info
+
+.info {
+  flex: 0 0 27%;
+}
+
+// .footer__logo
+
+.logo {
+  margin-bottom: 16px;
+  a {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    gap: 14px;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: $mainDarkColor;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+}
+
+// .footer__text
+
+.text {
+  margin-bottom: 24px;
+  line-height: 1.71;
+  opacity: 0.75;
+}
+
+// .footer__social
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+// .footer__columns
+
+.columns {
+  flex: 0 0 51.42%;
+  display: flex;
+  justify-content: space-between;
+}
+
+// .footer__column
+
+.column {
+}
+
+// .footer__label
+
+.label {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  color: $mainDarkBlueColor;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+// .footer__list
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  li {
+    a,
+    a:visited {
+      line-height: 1.286;
+      color: $mainLightGreyColor;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:active {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+      }
+    }
+  }
+}
