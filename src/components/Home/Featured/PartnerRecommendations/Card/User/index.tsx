@@ -21,7 +21,7 @@ export const User: React.FC = () => {
         </div>
       </div>
       <Link to="tel:+1234567890" className={styles.btn}>
-        <SvgIcon className={styles.svg} src={IconsEnum.call} />
+        <SvgIcon size={20} className={styles.svg} src={IconsEnum.call} />
         <span>Contact Now</span>
       </Link>
     </div>

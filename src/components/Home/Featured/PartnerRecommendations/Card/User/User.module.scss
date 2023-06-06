@@ -6,11 +6,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 33px;
+  margin-top: 35px;
+  border-top: 2px solid $mainLightBlueColor;
+  max-width: 440px;
   a,
   a:visited {
     display: inline-block;
     transition: all 0.3s ease 0s;
-    font-weight: 500;
     &:hover {
       opacity: 0.6;
     }
@@ -37,6 +40,7 @@
   line-height: 1.33;
   a,
   a:visited {
+    font-weight: 500;
     color: $mainDarkBlueColor;
   }
 }
@@ -45,19 +49,21 @@
   line-height: 1.5;
   a,
   a:visited {
+    font-weight: 400;
     color: $mainLightGreyColor;
   }
 }
 .btn {
   display: flex;
-  padding: 13px 16px 13px 56px;
+  padding: 14px 16.5px 12px 56.5px;
   position: relative;
   border-radius: 32px;
   background: $mainGreenColor;
   transition: all 0.3s ease 0s;
   span {
+    letter-spacing: 0.2px;
     transition: all 0.3s ease 0s;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.57;
     color: $mainWhiteColor;
@@ -85,7 +91,7 @@
 }
 .svg {
   position: absolute;
-  left: 16px;
+  left: 18px;
   top: 50%;
   transform: translate(0px, -50%);
 }

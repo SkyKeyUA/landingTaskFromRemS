@@ -4,25 +4,23 @@
 .inner {
 }
 .title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.75;
   opacity: 0.75;
   color: $mainDarkColor;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
-  border-bottom: 2px solid $mainLightBlueColor;
+  gap: 24px;
+  margin-left: 4px;
 }
 .body {
   display: flex;
-  flex: 1 1 35%;
+  flex: 0 0 46.4%;
   align-items: center;
   transition: all 0.3s ease 0s;
   a,
@@ -39,7 +37,7 @@
   }
 }
 .svg {
-  margin-right: 16px;
+  margin-right: 20px;
   svg {
     color: $mainLightGreyColor;
   }

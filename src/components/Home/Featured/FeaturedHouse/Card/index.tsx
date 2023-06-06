@@ -55,7 +55,7 @@ export const Card: React.FC<FeaturedHouseProps> = ({
         <div className={`featuredHouse__sort ${sort.toLocaleLowerCase().split(' ').join('')}`}>
           <Link to="/">
             <SvgIcon
-              size={14}
+              size={16}
               className="featuredHouse__svg"
               src={(selectedSvgIcon && selectedSvgIcon.iconEnum) as IconsEnum}
             />

@@ -21,6 +21,7 @@
 
 .heading {
   margin-top: 8px;
+  margin-bottom: 13px;
   &::before {
     content: '';
     position: absolute;
@@ -28,14 +29,14 @@
     width: 32px;
     top: -8px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-60%, 0);
   }
 }
 
 // .reviews__title
 
 .title {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   line-height: 1.25;
 }
 

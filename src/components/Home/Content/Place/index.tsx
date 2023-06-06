@@ -21,7 +21,7 @@ export const Place: React.FC = () => {
           for you
         </div>
         <div className={styles.input}>
-          <SvgIcon className={styles.svg} src={IconsEnum.location} />
+          <SvgIcon size={22} className={styles.svg} src={IconsEnum.location} />
           <input type="text" placeholder="Search for the location you want!" />
           <button className={styles.btn}>
             <span>Search</span>

@@ -69,7 +69,6 @@ export const Reviews: React.FC = () => {
           loop={true}
           pagination={true}
           initialSlide={1}
-          slidesOffsetBefore={47}
           className={styles.swiper}
           modules={[Pagination]}>
           {CardReviews.map((obj, i) => (

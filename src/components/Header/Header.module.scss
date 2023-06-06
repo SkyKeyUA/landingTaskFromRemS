@@ -6,7 +6,7 @@
   position: absolute;
   width: 100%;
   z-index: 50;
-  top: 46px;
+  top: 33px;
   // .header__container
 }
 .container {
@@ -71,7 +71,7 @@
     a,
     a:visited,
     span {
-      font-weight: 600;
+      font-weight: 400;
       color: $mainLightBlueColor;
       transition: all 0.3s ease 0s;
     }
@@ -83,6 +83,7 @@
     a {
       display: inline-block;
       padding: 8px 16px;
+      line-height: 1.286;
     }
     margin: 12px;
     background: rgba(255, 255, 255, 0.1);
@@ -108,6 +109,7 @@
       span {
         display: block;
         padding: 8px 44px 8px 16px;
+        line-height: 1.286;
         cursor: pointer;
       }
       margin: 12px;
@@ -126,7 +128,8 @@
   }
 
   &__btn {
-    padding: 12px 24px;
+    padding: 13px 25.5px;
+    line-height: 1.57;
     background: $mainGreenColor;
     border-radius: 32px;
     transition: all 0.3s ease 0s;
@@ -182,7 +185,7 @@
 .arrow {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
   transform: translate(0px, -50%) rotate(90deg);
   cursor: pointer;
   transition: all 0.3s ease 0s;

@@ -9,7 +9,7 @@ body {
   max-width: 1440px;
   font-family: 'Lexend';
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: $mainGreyColor;
   position: relative;
   min-height: 100%;
@@ -36,10 +36,9 @@ body {
 .home__heading {
   color: $mainYellowColor;
   line-height: 1.286;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
   position: relative;
-  margin-bottom: 12px;
 }
 .user__recommendation {
   display: flex;

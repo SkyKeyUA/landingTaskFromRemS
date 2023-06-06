@@ -35,7 +35,7 @@ export const Categories: React.FC<CategoriesProps> = React.memo(
               onClick={() => onClickCategory(i)}
               className={categoryId === i ? `${styles.item} ${styles.active}` : styles.item}>
               <Link to="/">
-                <SvgIcon className={styles.svg} size={18} src={obj.icon} />
+                <SvgIcon className={styles.svg} size={24} src={obj.icon} />
                 <span>{obj.category}</span>
               </Link>
             </li>
