@@ -28,7 +28,7 @@ export const InfoRecommendation: React.FC = () => {
         explain what we should know and check when we want to buy a house
       </div>
       <div className={styles.time ? `time__recommendation ${styles.time}` : 'time__recommendation'}>
-        <SvgIcon src={IconsEnum.clock} />8 min read | 25 Apr 2021
+        <SvgIcon size={20} src={IconsEnum.clock} />8 min read | 25 Apr 2021
       </div>
     </div>
   );

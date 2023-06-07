@@ -35,7 +35,7 @@ export const Card: React.FC<CardProps> = ({ image, userImage, fullName, title, t
         </div>
         <div
           className={styles.time ? `time__recommendation ${styles.time}` : 'time__recommendation'}>
-          <SvgIcon src={IconsEnum.clock} />
+          <SvgIcon size={20} src={IconsEnum.clock} />
           {time}
         </div>
       </div>

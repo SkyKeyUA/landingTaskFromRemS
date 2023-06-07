@@ -10,9 +10,9 @@
     position: absolute;
     width: 438px;
     height: 494px;
-    right: -94px;
-    top: 612px;
-    z-index: -1;
+    right: -108px;
+    top: 622px;
+    z-index: -2;
     background: #ff9882;
     opacity: 0.3;
     filter: blur(60px);
@@ -23,8 +23,8 @@
     position: absolute;
     width: 438px;
     height: 494px;
-    right: -153px;
-    top: 734px;
+    right: -125px;
+    top: 710px;
     background: #fffa82;
     opacity: 0.3;
     z-index: -1;
@@ -40,12 +40,17 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  @media (max-width: 1199.98px) {
+    padding: 0 10px;
+  }
 }
 
 // .featured__inner
 
 .inner {
-  margin-left: 40px;
+  @media (min-width: 991.98px) {
+    margin-left: 40px;
+  }
 }
 
 // .featured__heading
@@ -59,5 +64,9 @@
     top: 50%;
     left: -40px;
     transform: translate(0px, -50%);
+  }
+  @media (max-width: 991.98px) {
+    margin-left: 40px;
+    margin-bottom: 12px;
   }
 }

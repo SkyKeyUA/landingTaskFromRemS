@@ -24,14 +24,13 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 612px;
   background: $mainWhiteColor;
   box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
   border-radius: 16px;
   padding: 32px;
   margin-top: -144px;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 // .card__title
@@ -42,6 +41,7 @@
   line-height: 1.25;
   text-transform: capitalize;
   color: $mainDarkColor;
+  margin-bottom: 17px;
 }
 
 // .card__text
@@ -50,4 +50,5 @@
   line-height: 1.71;
   opacity: 0.75;
   color: $mainGreyColor;
+  margin-bottom: 24px;
 }

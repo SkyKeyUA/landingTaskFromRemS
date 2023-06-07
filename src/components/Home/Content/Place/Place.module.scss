@@ -4,7 +4,13 @@
 
 .root {
   flex: 50% 1 1;
-  margin-top: 182px;
+  padding-top: 182px;
+  @media (max-width: 1199.98px) {
+    padding: 182px 10px 0px;
+  }
+  @media (max-width: 767.98px) {
+    padding-top: 280px;
+  }
   // .place__body
 }
 .body {
@@ -49,6 +55,9 @@
     -webkit-transform: translateY(1px);
     transform: translateY(1px);
   }
+  @media (max-width: 479.98px) {
+    font-size: 24px;
+  }
 }
 
 // .place__text
@@ -56,8 +65,8 @@
 .text {
   font-size: 16px;
   line-height: 1.75;
-  opacity: 0.75;
   margin-bottom: 32px;
+  opacity: 0.75;
 }
 
 // .place__input
@@ -86,6 +95,11 @@
   }
   input::placeholder {
     color: $mainLightGreyColor;
+  }
+  @media (max-width: 479.98px) {
+    input {
+      width: 100%;
+    }
   }
 }
 .svg {

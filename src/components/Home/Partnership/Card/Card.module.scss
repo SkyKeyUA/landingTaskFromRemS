@@ -6,6 +6,7 @@
 .item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 32px;
 }
 
@@ -40,6 +41,7 @@
 // .recommendation__user
 
 .user {
+  margin-bottom: 14px;
 }
 
 // .recommendation__title

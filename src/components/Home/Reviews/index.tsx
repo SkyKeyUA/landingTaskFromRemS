@@ -63,20 +63,22 @@ export const Reviews: React.FC = () => {
       <div className={styles.containter}>
         <div className={`home__heading ${styles.heading}`}>See Our Review</div>
         <div className={`home__title ${styles.title}`}>What Our User Say About Us</div>
-        <Swiper
-          spaceBetween={56}
-          slidesPerView={1}
-          loop={true}
-          pagination={true}
-          initialSlide={1}
-          className={styles.swiper}
-          modules={[Pagination]}>
-          {CardReviews.map((obj, i) => (
-            <SwiperSlide key={i}>
-              <Card {...obj} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className={styles.body}>
+          <Swiper
+            spaceBetween={56}
+            slidesPerView={1}
+            loop={true}
+            pagination={true}
+            initialSlide={1}
+            className={styles.swiper}
+            modules={[Pagination]}>
+            {CardReviews.map((obj, i) => (
+              <SwiperSlide key={i}>
+                <Card {...obj} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

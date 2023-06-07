@@ -27,8 +27,8 @@ export const Footer: React.FC = () => {
   ];
   const social = [
     '/img/icons/social/facebook.svg',
-    '/img/icons/social/instagram.svg',
     '/img/icons/social/twitter.svg',
+    '/img/icons/social/instagram.svg',
   ];
   return (
     <footer className={styles.root}>

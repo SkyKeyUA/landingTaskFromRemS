@@ -45,10 +45,8 @@
 
   &_1 {
     img {
-      width: 81px;
-      height: 81px;
-      left: 44px;
-      top: 38px;
+      left: 42px;
+      top: 36px;
     }
   }
 
@@ -56,10 +54,8 @@
 
   &_2 {
     img {
-      width: 54px;
-      height: 54px;
-      left: 195px;
-      bottom: 80px;
+      left: 193px;
+      bottom: 78px;
     }
   }
 
@@ -67,10 +63,8 @@
 
   &_3 {
     img {
-      width: 70px;
-      height: 70px;
-      right: 200px;
-      top: 44px;
+      right: 198px;
+      top: 42px;
     }
   }
 
@@ -78,10 +72,8 @@
 
   &_4 {
     img {
-      width: 55px;
-      height: 55px;
-      right: 73px;
-      bottom: 60px;
+      right: 71px;
+      bottom: 58px;
     }
   }
 }
@@ -94,8 +86,8 @@
     border: 2px solid #ffffff;
     border-radius: 24px;
     filter: drop-shadow(0px 9px 32px rgba(89, 92, 219, 0.1));
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     transition: all 0.3s ease 0s;
   }
   &:hover {
@@ -113,8 +105,8 @@
 
   &_1 {
     img {
-      left: 67px;
-      bottom: 103px;
+      left: 65px;
+      bottom: 101px;
     }
   }
 
@@ -122,8 +114,8 @@
 
   &_2 {
     img {
-      left: 204px;
-      top: 71px;
+      left: 202px;
+      top: 69px;
     }
   }
 
@@ -131,8 +123,8 @@
 
   &_3 {
     img {
-      right: 200px;
-      top: 143px;
+      right: 198px;
+      top: 141px;
     }
   }
 
@@ -140,8 +132,8 @@
 
   &_4 {
     img {
-      right: 82px;
-      top: 107px;
+      right: 80px;
+      top: 105px;
     }
   }
 }
@@ -180,6 +172,8 @@
   }
   input::placeholder {
     color: $mainLightGreyColor;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 
@@ -187,7 +181,7 @@
 .svg {
   position: absolute;
   top: 50%;
-  left: 24px;
+  left: 26px;
   transform: translate(0px, -50%);
 }
 
@@ -211,7 +205,7 @@
   right: 4px;
   transform: translate(0px, -50%);
   transition: all 0.3s ease 0s;
-  font-weight: 600;
+  font-weight: 500;
   color: $mainWhiteColor;
   transition: all 0.3s ease 0s;
   &:hover {

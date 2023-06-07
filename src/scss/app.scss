@@ -44,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 12px;
+  font-weight: 400;
   img {
     width: 32px;
     height: 32px;
@@ -66,10 +66,10 @@ body {
 }
 .time__recommendation {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  gap: 14px;
   line-height: 1.71;
   color: $mainLightGreyColor;
+  margin-left: 2px;
 }
 //========================================================================================================================================================
 

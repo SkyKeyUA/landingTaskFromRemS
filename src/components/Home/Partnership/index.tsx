@@ -42,7 +42,9 @@ export const Partnership: React.FC = () => {
     <section className={styles.root}>
       <div className={styles.container}>
         <div className={styles.inner}>
-          <div className={styles.heading}>See tips and trick from our partnership</div>
+          <div className={`home__heading ${styles.heading}`}>
+            See tips and trick from our partnership
+          </div>
           <div className={styles.title}>Find out more about selling and buying homes</div>
           <button className={styles.btn}>More Artikel</button>
         </div>

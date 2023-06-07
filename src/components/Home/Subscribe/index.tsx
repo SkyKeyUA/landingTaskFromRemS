@@ -31,7 +31,7 @@ export const Subscribe: React.FC = () => {
           Subscribe For More Info and update from Hounter
         </div>
         <form className={styles.form}>
-          <SvgIcon className={styles.svg} src={IconsEnum.mail} />
+          <SvgIcon size={20} className={styles.svg} src={IconsEnum.mail} />
           <input className={styles.input} type="email" placeholder="Your email here" />
           <button className={styles.btn} type="submit">
             Subscribe Now

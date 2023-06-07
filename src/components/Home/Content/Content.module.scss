@@ -2,8 +2,8 @@
 
 .root {
   position: relative;
-  background: url('../../../../public/img/header/image.jpg') 100% 0 no-repeat;
   margin-bottom: 120px;
+  background: url('../../../../public/img/header/image.jpg') 100% 0 no-repeat;
   &::after {
     content: '';
     position: absolute;
@@ -30,12 +30,27 @@
     filter: blur(60px);
     transform: rotate(90deg);
   }
+  @media (max-width: 1269.98px) {
+    background: url('../../../../public/img/header/image.jpg') 120% 0 no-repeat;
+  }
+  @media (max-width: 1149.98px) {
+    background: url('../../../../public/img/header/image.jpg') 140% 0 no-repeat;
+  }
+  @media (max-width: 1099.98px) {
+    background: none;
+    margin-bottom: 60px;
+  }
 }
 
 // .content__container
 
 .container {
-  display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  @media (min-width: 1099.98px) {
+    display: flex;
+  }
+  @media (max-width: 767.98px) {
+    padding: 0px 10px;
+  }
 }

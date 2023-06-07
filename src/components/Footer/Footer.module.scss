@@ -5,7 +5,7 @@
 // .footer__root
 
 .root {
-  padding: 120px 0px;
+  padding: 121px 0px 126px 0px;
   position: relative;
   &::after {
     content: '';
@@ -47,7 +47,7 @@
 // .footer__info
 
 .info {
-  flex: 0 0 27%;
+  flex: 0 0 26.5%;
 }
 
 // .footer__logo
@@ -78,7 +78,7 @@
 // .footer__text
 
 .text {
-  margin-bottom: 24px;
+  margin-bottom: 29px;
   line-height: 1.71;
   opacity: 0.75;
 }
@@ -88,7 +88,8 @@
 .social {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 36px;
+  margin-left: 9px;
 }
 
 // .footer__columns

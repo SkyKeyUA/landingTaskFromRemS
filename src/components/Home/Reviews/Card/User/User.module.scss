@@ -6,7 +6,7 @@
 
 .root {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   a,
   a:visited {
@@ -33,7 +33,7 @@
 // .user__image
 
 .image {
-  margin-right: 24px;
+  margin-right: 23px;
   img {
     width: 40px;
     height: 40px;
@@ -86,5 +86,5 @@
 // .user__svg
 
 .svg {
-  margin-right: 16px;
+  margin-right: 18px;
 }
