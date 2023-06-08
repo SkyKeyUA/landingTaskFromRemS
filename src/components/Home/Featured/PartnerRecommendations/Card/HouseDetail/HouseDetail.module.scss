@@ -17,23 +17,27 @@
   flex-wrap: wrap;
   gap: 24px;
   margin-left: 4px;
+  @media (max-width: 1099.98px) {
+    max-width: 480px;
+  }
 }
 .body {
   display: flex;
   flex: 0 0 46.4%;
   align-items: center;
-  transition: all 0.3s ease 0s;
+  white-space: nowrap;
   a,
   a:visited {
     display: inline-flex;
     align-items: center;
-  }
-  &:hover {
-    opacity: 0.6;
-  }
-  &:active {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
   }
 }
 .svg {

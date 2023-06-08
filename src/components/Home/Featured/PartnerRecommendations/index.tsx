@@ -17,13 +17,13 @@ export const PartnerRecommendations: React.FC = () => {
       loop={true}
       noSwiping={true}
       noSwipingClass={styles.swiper}
+      slidesPerView={1}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
       modules={[Autoplay]}
-      slidesPerView={1}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}>
       <SwiperSlide>

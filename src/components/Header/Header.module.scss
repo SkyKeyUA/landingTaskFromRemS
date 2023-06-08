@@ -3,10 +3,12 @@
 @import '../../scss/variables';
 
 .root {
-  position: absolute;
-  width: 100%;
-  z-index: 50;
-  top: 33px;
+  @media (min-width: 1099.98px) {
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+    top: 33px;
+  }
   @media (max-width: 1199.98px) {
     padding: 0 10px;
   }
@@ -29,6 +31,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1099.98px) {
+    min-height: 90px;
+  }
   @media (max-width: 767.98px) {
     flex-direction: column;
   }
@@ -172,6 +177,7 @@
     transition: all 0.3s ease 0s;
     opacity: 0;
     visibility: hidden;
+    z-index: 5;
     &.open {
       top: 40px;
       opacity: 1;

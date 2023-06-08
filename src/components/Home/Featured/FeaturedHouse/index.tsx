@@ -59,7 +59,7 @@ export const FeaturedHouse: React.FC = () => {
           // slidesPerGroup={3}
           noSwiping={true}
           noSwipingClass={styles.swiper}
-          slidesPerView={3.16}
+          slidesPerView={1}
           modules={[Navigation]}
           navigation={{
             nextEl: `.${styles.next}`,
@@ -68,18 +68,28 @@ export const FeaturedHouse: React.FC = () => {
           }}
           loop={true}
           breakpoints={{
-            // when window width is >= 320px
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 24,
+            399.98: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
             },
-            // when window width is >= 480px
-            480: {
-              slidesPerView: 1,
-              spaceBetween: 40,
+            539.98: {
+              slidesPerView: 1.5,
+              spaceBetween: 10,
             },
-            // when window width is >= 640px
-            640: {
+            659.98: {
+              slidesPerView: 1.8,
+              spaceBetween: 10,
+            },
+            767.98: {
+              slidesPerView: 2.16,
+            },
+            991.98: {
+              slidesPerView: 2.5,
+            },
+            1099.98: {
+              slidesPerView: 3,
+            },
+            1199.98: {
               slidesPerView: 3.16,
               spaceBetween: 40,
             },

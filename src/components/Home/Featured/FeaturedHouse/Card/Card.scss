@@ -19,7 +19,11 @@
     a,
     a:visited {
       img {
+        border-radius: 24px;
         transition: all 0.3s ease 0s;
+        @media (max-width: 479.98px) {
+          width: 300px;
+        }
       }
       &:hover {
         img {

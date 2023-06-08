@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import './scss/app.scss';
 
 function App() {
+  console.log(process.env.REACT_APP_API_URL);
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>

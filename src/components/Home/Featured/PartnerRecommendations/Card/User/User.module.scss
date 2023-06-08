@@ -10,6 +10,10 @@
   margin-top: 35px;
   border-top: 2px solid $mainLightBlueColor;
   max-width: 440px;
+  @media (max-width: 479.98px) {
+    flex-direction: column;
+    gap: 20px;
+  }
   a,
   a:visited {
     display: inline-block;

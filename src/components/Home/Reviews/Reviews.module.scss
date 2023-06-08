@@ -15,6 +15,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 1199.98px) {
+    padding: 0px 10px;
+  }
 }
 
 // .reviews__heading
@@ -43,7 +46,9 @@
 // .reviews__body
 
 .body {
-  padding-left: 96px;
+  @media (min-width: 1199.98px) {
+    padding-left: 96px;
+  }
 }
 
 // .reviews__swiper
