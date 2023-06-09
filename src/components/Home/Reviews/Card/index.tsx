@@ -23,11 +23,13 @@ export const Card: React.FC<CardReviewsProps> = ({ image, title, text, rating, u
   const { userImage, fullName, position } = user;
   return (
     <div className={styles.root}>
-      <Link to="/">
-        <img className={styles.image} src={image} alt="House" />
+      <Link className={styles.image} to="/">
+        <img src={image} alt="House" />
       </Link>
       <div className={styles.body}>
-        <div className={styles.title}>{title}</div>
+        <div className={styles.title}>
+          <Link to="/">{title}</Link>
+        </div>
         <div className={styles.text}>{text}</div>
         <User userImage={userImage} fullName={fullName} position={position} rating={rating} />
       </div>

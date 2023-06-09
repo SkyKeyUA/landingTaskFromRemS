@@ -31,6 +31,9 @@
     filter: blur(60px);
     transform: rotate(90deg);
   }
+  @media (max-width: 1099.98px) {
+    margin-bottom: 60px;
+  }
 }
 .body {
   overflow: hidden;

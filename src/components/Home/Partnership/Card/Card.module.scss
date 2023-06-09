@@ -4,10 +4,11 @@
 
 // .recommendation__item
 .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
+  @media (min-width: 479.98px) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
 }
 
 // .recommendation__image
@@ -30,6 +31,12 @@
         transform: scale(1.05);
       }
     }
+  }
+  @media (max-width: 479.98px) {
+    img {
+      width: 100%;
+    }
+    margin-bottom: 25px;
   }
 }
 

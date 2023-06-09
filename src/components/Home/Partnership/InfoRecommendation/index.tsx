@@ -24,8 +24,8 @@ export const InfoRecommendation: React.FC = () => {
         <Link to="/">12 Things to know before buying a house</Link>
       </div>
       <div className={styles.text}>
-        Want to buy a house but are unsure about what we should know, here I will try to <br />
-        explain what we should know and check when we want to buy a house
+        Want to buy a house but are unsure about what we should know, here I will try to explain
+        what we should know and check when we want to buy a house
       </div>
       <div className={styles.time ? `time__recommendation ${styles.time}` : 'time__recommendation'}>
         <SvgIcon size={20} src={IconsEnum.clock} />8 min read | 25 Apr 2021

@@ -34,15 +34,17 @@ export const Footer: React.FC = () => {
     <footer className={styles.root}>
       <div className={styles.containter}>
         <div className={styles.info}>
-          <div className={styles.logo}>
-            <Link to="/">
-              <SvgIcon size={36} src={IconsEnum.logo} />
-              <span>Hounter</span>
-            </Link>
-          </div>
-          <div className={styles.text}>
-            We provide information about properties such as houses, villas and apartments to help
-            people find their dream home
+          <div className={styles.body}>
+            <div className={styles.logo}>
+              <Link to="/">
+                <SvgIcon size={36} src={IconsEnum.logo} />
+                <span>Hounter</span>
+              </Link>
+            </div>
+            <div className={styles.text}>
+              We provide information about properties such as houses, villas and apartments to help
+              people find their dream home
+            </div>
           </div>
           <div className={styles.social}>
             {social.map((soc, i) => (

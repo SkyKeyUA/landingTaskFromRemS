@@ -16,6 +16,12 @@
     img {
       transition: all 0.3s ease 0s;
       border-radius: 16px;
+      @media (max-width: 1099.98px) {
+        width: 480px;
+      }
+      @media (max-width: 991.98px) {
+        width: 100%;
+      }
     }
     &:hover {
       img {

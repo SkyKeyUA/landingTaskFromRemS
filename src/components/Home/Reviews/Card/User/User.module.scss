@@ -12,7 +12,6 @@
   a:visited {
     display: inline-block;
     transition: all 0.3s ease 0s;
-    font-weight: 500;
     &:hover {
       opacity: 0.6;
     }
@@ -55,6 +54,7 @@
   line-height: 1.57;
   a,
   a:visited {
+    font-weight: 500;
     color: $mainDarkBlueColor;
   }
 }
@@ -66,6 +66,7 @@
   line-height: 1.57;
   a,
   a:visited {
+    font-weight: 400;
     color: $mainLightGreyColor;
   }
 }
