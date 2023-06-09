@@ -2,6 +2,8 @@
 
 Figma Link: https://www.figma.com/file/Z6B5xZtTLnrBvRKOeiz1Jt/Landing-test-for-front-end?type=design&t=Zr6SY7DUPgCZDG1P-0
 
+gh-pages Link: https://skykeyua.github.io/landingTaskFromRemS/
+
 # Description English
 
 # **CONDITIONS**
