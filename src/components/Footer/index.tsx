@@ -12,31 +12,27 @@ export const Footer: React.FC = () => {
       label: 'Property',
       list: ['House', 'Apartment', 'Villa'],
 
-      link: '/',
+      link: '/landingTaskFromRemS/',
     },
     {
       label: 'Article',
       list: ['New Article', 'Popular Article', 'Most Read', 'Tips & Tricks'],
-      link: '/',
+      link: '/landingTaskFromRemS/',
     },
     {
       label: 'Contact',
       list: ['2464 Royal Ln. Mesa, New Jersey 45463', '(671) 555-0110', 'info@hounter.com'],
-      link: ['/', 'tel:6715550110', 'mailto:info@hounter.com'],
+      link: ['/landingTaskFromRemS/', 'tel:6715550110', 'mailto:info@hounter.com'],
     },
   ];
-  const social = [
-    '/img/icons/social/facebook.svg',
-    '/img/icons/social/twitter.svg',
-    '/img/icons/social/instagram.svg',
-  ];
+  const social = [IconsEnum.facebook, IconsEnum.twitter, IconsEnum.instagram];
   return (
     <footer className={styles.root}>
       <div className={styles.containter}>
         <div className={styles.info}>
           <div className={styles.body}>
             <div className={styles.logo}>
-              <Link to="/">
+              <Link to="/landingTaskFromRemS/">
                 <SvgIcon size={36} src={IconsEnum.logo} />
                 <span>Hounter</span>
               </Link>
@@ -48,8 +44,8 @@ export const Footer: React.FC = () => {
           </div>
           <div className={styles.social}>
             {social.map((soc, i) => (
-              <Link key={i} to="/">
-                <img src={soc} alt="social" />
+              <Link key={i} to="/landingTaskFromRemS/">
+                <SvgIcon size={32} src={soc} />
               </Link>
             ))}
           </div>

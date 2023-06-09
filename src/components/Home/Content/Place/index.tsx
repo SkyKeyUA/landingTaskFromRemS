@@ -12,7 +12,7 @@ export const Place: React.FC = () => {
     <div className={styles.root}>
       <div className={styles.body}>
         <div className={styles.title}>
-          <Link to="/">
+          <Link to="/landingTaskFromRemS/">
             find the place to live <span>your dreams</span> easily here
           </Link>
         </div>

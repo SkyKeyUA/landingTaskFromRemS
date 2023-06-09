@@ -18,20 +18,20 @@ export const Card: React.FC<CardProps> = ({ image, userImage, fullName, title, t
   return (
     <div className={styles.item}>
       <div className={styles.image}>
-        <Link to="/">
+        <Link to="/landingTaskFromRemS/">
           <img src={image} alt="house" />
         </Link>
       </div>
       <div className={styles.body}>
         <div
           className={styles.user ? `user__recommendation ${styles.user}` : 'user__recommendation'}>
-          <Link to="/">
+          <Link to="/landingTaskFromRemS/">
             <img src={userImage} alt="user" />
           </Link>
-          <Link to="/">{fullName}</Link>
+          <Link to="/landingTaskFromRemS/">{fullName}</Link>
         </div>
         <div className={styles.title}>
-          <Link to="/">{title}</Link>
+          <Link to="/landingTaskFromRemS/">{title}</Link>
         </div>
         <div
           className={styles.time ? `time__recommendation ${styles.time}` : 'time__recommendation'}>

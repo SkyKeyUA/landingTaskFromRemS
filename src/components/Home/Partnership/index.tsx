@@ -17,22 +17,22 @@ type CardProps = {
 export const Partnership: React.FC = () => {
   const recommendation: CardProps[] = [
     {
-      image: '/img/partner-recommendations/1.jpg',
-      userImage: '/img/users/3.png',
+      image: 'img/partner-recommendations/1.jpg',
+      userImage: 'img/users/3.png',
       fullName: 'Dianne Russell',
       title: 'The things we need to check when we want to buy a house',
       time: '4 min read | 25 Apr 2021',
     },
     {
-      image: '/img/partner-recommendations/2.jpg',
-      userImage: '/img/users/10.png',
+      image: 'img/partner-recommendations/2.jpg',
+      userImage: 'img/users/10.png',
       fullName: 'Courtney Henry',
       title: '7 Ways to distinguish the quality of the house we want to buy',
       time: '6 min read | 24 Apr 2021',
     },
     {
-      image: '/img/partner-recommendations/3.jpg',
-      userImage: '/img/users/11.png',
+      image: 'img/partner-recommendations/3.jpg',
+      userImage: 'img/users/11.png',
       fullName: 'Darlene Robertson',
       title: 'The best way to know the quality of the house we want to buy',
       time: '2 min read | 24 Apr 2021',

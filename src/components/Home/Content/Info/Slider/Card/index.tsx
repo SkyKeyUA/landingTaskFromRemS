@@ -21,7 +21,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ images, title, text }) => {
             className={
               images.length > 1 ? `${styles.image} ${styles[`image_${i + 1}`]}` : styles.image
             }>
-            <Link to="/">
+            <Link to="/landingTaskFromRemS/">
               <img src={image} alt="user" />
             </Link>
           </div>
@@ -29,10 +29,10 @@ export const InfoCard: React.FC<InfoCardProps> = ({ images, title, text }) => {
       </div>
       <div className={styles.items}>
         <div className={styles.title}>
-          <Link to="/">{title}</Link>
+          <Link to="/landingTaskFromRemS/">{title}</Link>
         </div>
         <div className={styles.text}>
-          <Link to="/">{text}</Link>
+          <Link to="/landingTaskFromRemS/">{text}</Link>
         </div>
       </div>
     </div>

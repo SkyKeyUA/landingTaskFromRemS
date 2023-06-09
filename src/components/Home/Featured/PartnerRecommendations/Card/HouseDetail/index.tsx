@@ -45,7 +45,7 @@ export const HouseDetail: React.FC = () => {
       <div className={styles.info}>
         {details.map((obj) => (
           <div key={obj.id} className={styles.body}>
-            <Link to="/">
+            <Link to="/landingTaskFromRemS/">
               <SvgIcon className={styles.svg} src={obj.iconEnum} />
               <div className={styles.rooms}>
                 {obj.rooms} {obj.title}

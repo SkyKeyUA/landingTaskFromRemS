@@ -49,11 +49,11 @@ export const Card: React.FC<FeaturedHouseProps> = ({
   return (
     <div className="featuredHouse__body">
       <div className="featuredHouse__image">
-        <Link to="/">
+        <Link to="/landingTaskFromRemS/">
           <img src={image} alt="featuredHouse" />
         </Link>
         <div className={`featuredHouse__sort ${sort.toLocaleLowerCase().split(' ').join('')}`}>
-          <Link to="/">
+          <Link to="/landingTaskFromRemS/">
             <SvgIcon
               size={16}
               className="featuredHouse__svg"
@@ -64,23 +64,23 @@ export const Card: React.FC<FeaturedHouseProps> = ({
         </div>
       </div>
       <div className="featuredHouse__title">
-        <Link to="/">{title}</Link>
+        <Link to="/landingTaskFromRemS/">{title}</Link>
       </div>
       <div className="featuredHouse__text">
-        <Link to="/">{text}</Link>
+        <Link to="/landingTaskFromRemS/">{text}</Link>
       </div>
       <div className="featuredHouse__info">
         <div className="featuredHouse__user">
-          <Link to="/">
+          <Link to="/landingTaskFromRemS/">
             <img src={user} alt="user" />
           </Link>
         </div>
         <div className="featuredHouse__items">
           <div className="featuredHouse__fullname">
-            <Link to="/">{fullname}</Link>
+            <Link to="/landingTaskFromRemS/">{fullname}</Link>
           </div>
           <div className="featuredHouse__location">
-            <Link to="/">{location}</Link>
+            <Link to="/landingTaskFromRemS/">{location}</Link>
           </div>
         </div>
       </div>

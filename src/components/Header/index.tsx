@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.body}>
           <div className={styles.logo}>
-            <Link to="/landingTaskFromRemS">
+            <Link to="/landingTaskFromRemS/">
               <SvgIcon size={36} src={IconsEnum.logo} />
               <span>Hounter</span>
             </Link>
@@ -56,13 +56,13 @@ export const Header: React.FC = () => {
                         }>
                         {obj.submenu.map((subObj, subIndex) => (
                           <li className={styles.submenu__link} key={subIndex}>
-                            <Link to="/">{subObj}</Link>
+                            <Link to="/landingTaskFromRemS/">{subObj}</Link>
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
-                    <Link to="/">{obj.menu}</Link>
+                    <Link to="/landingTaskFromRemS/">{obj.menu}</Link>
                   )}
                 </li>
               ))}

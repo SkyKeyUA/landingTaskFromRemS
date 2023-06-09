@@ -34,7 +34,7 @@ export const Categories: React.FC<CategoriesProps> = React.memo(
               key={i}
               onClick={() => onClickCategory(i)}
               className={categoryId === i ? `${styles.item} ${styles.active}` : styles.item}>
-              <Link to="/">
+              <Link to="/landingTaskFromRemS/">
                 <SvgIcon className={styles.svg} size={24} src={obj.icon} />
                 <span>{obj.category}</span>
               </Link>

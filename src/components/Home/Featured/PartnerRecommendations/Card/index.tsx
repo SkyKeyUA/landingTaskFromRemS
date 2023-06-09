@@ -11,16 +11,16 @@ import { User } from './User';
 export const Card: React.FC = () => {
   const images = [
     {
-      image: '/img/details/1.jpg',
+      image: 'img/details/1.jpg',
     },
     {
-      image: '/img/details/2.jpg',
+      image: 'img/details/2.jpg',
     },
     {
-      image: '/img/details/3.jpg',
+      image: 'img/details/3.jpg',
     },
     {
-      image: '/img/details/4.jpg',
+      image: 'img/details/4.jpg',
     },
   ];
   return (
@@ -39,7 +39,10 @@ export const Card: React.FC = () => {
       </div>
       <div className={styles.images}>
         {images.map((obj, i) => (
-          <Link key={i} to="/" className={`${styles.image} ${styles[`image_${i + 1}`]}`}>
+          <Link
+            key={i}
+            to="/landingTaskFromRemS/"
+            className={`${styles.image} ${styles[`image_${i + 1}`]}`}>
             <img src={obj.image} alt="Image details" />
           </Link>
         ))}

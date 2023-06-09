@@ -6,10 +6,10 @@ import styles from './Partnership.module.scss';
 
 export const Partnership: React.FC = () => {
   const partnership: string[] = [
-    '/img/partners/1.png',
-    '/img/partners/2.png',
-    '/img/partners/3.png',
-    '/img/partners/4.png',
+    'img/partners/1.png',
+    'img/partners/2.png',
+    'img/partners/3.png',
+    'img/partners/4.png',
   ];
   return (
     <div className={styles.root}>

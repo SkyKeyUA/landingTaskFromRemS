@@ -10,18 +10,18 @@ export const InfoRecommendation: React.FC = () => {
   return (
     <div className={styles.root}>
       <div className={styles.image}>
-        <Link to="/">
-          <img src="/img/partner-recommendations/4.jpg" alt="house" />
+        <Link to="/landingTaskFromRemS/">
+          <img src="img/partner-recommendations/4.jpg" alt="house" />
         </Link>
       </div>
       <div className={styles.user ? `user__recommendation ${styles.user}` : 'user__recommendation'}>
-        <Link to="/">
-          <img src="/img/users/12.png" alt="user" />
+        <Link to="/landingTaskFromRemS/">
+          <img src="img/users/12.png" alt="user" />
         </Link>
-        <Link to="/">Cameron Williamson</Link>
+        <Link to="/landingTaskFromRemS/">Cameron Williamson</Link>
       </div>
       <div className={styles.title}>
-        <Link to="/">12 Things to know before buying a house</Link>
+        <Link to="/landingTaskFromRemS/">12 Things to know before buying a house</Link>
       </div>
       <div className={styles.text}>
         Want to buy a house but are unsure about what we should know, here I will try to explain
