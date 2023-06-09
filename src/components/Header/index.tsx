@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.body}>
           <div className={styles.logo}>
-            <Link to="/">
+            <Link to="/landingTaskFromRemS">
               <SvgIcon size={36} src={IconsEnum.logo} />
               <span>Hounter</span>
             </Link>
