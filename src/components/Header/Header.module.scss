@@ -71,7 +71,6 @@
   align-items: center;
   font-weight: 600;
   @media (max-width: 767.98px) {
-    flex-direction: column;
     flex-wrap: wrap;
   }
   &__body {
