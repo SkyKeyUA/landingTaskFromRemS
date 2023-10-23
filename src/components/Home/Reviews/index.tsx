@@ -65,12 +65,12 @@ export const Reviews: React.FC = () => {
         <div className={`home__title ${styles.title}`}>What Our User Say About Us</div>
         <div className={styles.body}>
           <Swiper
+            className={styles.swiper}
             spaceBetween={56}
             slidesPerView={1}
             loop={true}
             pagination={true}
             initialSlide={1}
-            className={styles.swiper}
             modules={[Pagination]}>
             {CardReviews.map((obj, i) => (
               <SwiperSlide key={i}>

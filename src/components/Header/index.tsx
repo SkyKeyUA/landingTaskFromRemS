@@ -26,11 +26,20 @@ const menuItems: MenuItem[] = [
 
 export const Header: React.FC = () => {
   const [open, setOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
   const toggleMenu = open ? `${styles.menu__link_arrow} ${styles.open}` : styles.menu__link_arrow;
   return (
     <header className={styles.root}>
       <div className={styles.container}>
         <div className={styles.body}>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            type="button"
+            className={
+              menuOpen ? `${styles['icon-menu']} ${styles['menu-open']}` : styles['icon-menu']
+            }>
+            <span></span>
+          </button>
           <div className={styles.logo}>
             <Link to="/landingTaskFromRemS/">
               <SvgIcon size={36} src={IconsEnum.logo} />
@@ -38,7 +47,7 @@ export const Header: React.FC = () => {
             </Link>
           </div>
           <nav className={styles.menu}>
-            <ul className={styles.menu__list}>
+            <ul className={`${styles.menu__list} ${menuOpen ? styles.open__list : ''}`}>
               {menuItems.map((obj, index) => (
                 <li className={obj.submenu ? toggleMenu : styles.menu__link} key={index}>
                   {obj.submenu ? (
