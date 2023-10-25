@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react';
-import { IconsEnum, SvgIcon } from '../../SvgIcon';
 
 import styles from './Subscribe.module.scss';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../SvgIcon';
 
 export const Subscribe: React.FC = () => {
   const houseImage = ['img/info/1.jpg', 'img/info/2.jpg', 'img/info/3.jpg', 'img/info/4.jpg'];

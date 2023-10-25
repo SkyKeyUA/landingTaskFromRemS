@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
 
 import './Card.scss';
+import { IconsEnum, SvgIcon } from '../../../../SvgIcon';
 
 type FeaturedHouseProps = {
   image: string;

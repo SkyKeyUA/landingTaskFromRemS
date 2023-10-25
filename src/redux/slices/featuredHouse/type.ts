@@ -1,7 +1,5 @@
 /** @format */
 
-import { IconsEnum } from '../../../components/SvgIcon';
-
 export type FeaturedHouse = {
   id: string;
   category: number;

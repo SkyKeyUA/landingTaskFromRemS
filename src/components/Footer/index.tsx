@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react';
-import { IconsEnum, SvgIcon } from '../SvgIcon';
 import { Link } from 'react-router-dom';
 
 import styles from './Footer.module.scss';
+import { IconsEnum, SvgIcon } from '../SvgIcon';
 
 export const Footer: React.FC = () => {
   const footerList = [

@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react';
-import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 
 import styles from './Card.module.scss';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 
 type CardProps = {
   image: string;

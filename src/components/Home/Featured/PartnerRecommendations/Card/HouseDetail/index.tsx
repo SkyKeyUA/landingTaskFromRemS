@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './HouseDetail.module.scss';
-import { IconsEnum, SvgIcon } from '../../../../../SvgIcon';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../../../../SvgIcon';
 
 type DetailsProps = {
   id: number;

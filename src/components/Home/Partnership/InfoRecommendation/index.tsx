@@ -3,8 +3,8 @@
 import React from 'react';
 
 import styles from './InfoRecommendation.module.scss';
-import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 import { Link } from 'react-router-dom';
+import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 
 export const InfoRecommendation: React.FC = () => {
   return (

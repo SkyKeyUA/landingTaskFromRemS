@@ -8,7 +8,6 @@ import styles from './FeaturedHouse.module.scss';
 
 import { Navigation } from 'swiper';
 
-import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 import { Card } from './Card';
 import { Categories } from './Categories';
 import { useSelector } from 'react-redux';
@@ -18,6 +17,7 @@ import { fetchFeaturedHouse } from '../../../../redux/slices/featuredHouse/async
 import { Skeleton } from './Card/Skeleton';
 import { selectFilter } from '../../../../redux/slices/filter/selectors';
 import { setCategoryId } from '../../../../redux/slices/filter/slice';
+import { IconsEnum, SvgIcon } from '../../../SvgIcon';
 
 export const FeaturedHouse: React.FC = () => {
   const dispatch = useAppDispatch();
